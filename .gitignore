@@ -5,4 +5,5 @@ pom.xml.versionsBackup
 pom.xml.next
 release.properties
 .idea
+*.blend*
 *.iml
