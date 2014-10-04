@@ -1,0 +1,27 @@
+# Written by MakeHuman 1.0.2
+version v1.0.2
+tags human-male
+face head-diamond 0.298000
+clothes tshirt02 1bba9db9-1859-424b-bbff-e3abd48f0fc5
+clothes jeans01 faa58a00-05db-4a53-a3a6-72af1cec2053
+clothesHideFaces True
+armslegs l-upperleg-scale-horiz-decr-incr -0.436000
+armslegs l-lowerleg-scale-horiz-decr-incr -0.436000
+armslegs r-lowerleg-scale-horiz-decr-incr -0.370000
+armslegs r-upperleg-scale-horiz-decr-incr -0.388000
+gendered BreastFirmness 0.500000
+gendered BreastSize 0.500000
+macro Weight 0.718000
+macro Gender 1.000000
+macro Age 0.476000
+macro Height 0.790000
+macro Asian 0.000000
+macro African 0.000000
+macro Caucasian 1.000000
+macro Muscle 0.823000
+macro BodyProportions 0.548000
+background enabled False
+skinMaterial skins/toon01/toon01.mhmat
+material jeans01 faa58a00-05db-4a53-a3a6-72af1cec2053 clothes/jeans01/jeans01_black_leather.mhmat
+skeleton basic.json
+subdivide False
