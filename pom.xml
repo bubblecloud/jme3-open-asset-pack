@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.bubblecloud.jme3</groupId>
+    <artifactId>jme3-open-asset-pack</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>bubblecloud-cloudbees-release</id>
+            <name>bubblecloud-cloudbees-release</name>
+            <url>http://repository-bubblecloud.forge.cloudbees.com/release/</url>
+        </repository>
+    </repositories>
+
+    <!-- Deploy releases and snapshots to the CloudBees maven repositories -->
+    <distributionManagement>
+        <downloadUrl>http://repository-bubblecloud.forge.cloudbees.com/snapshot/</downloadUrl>
+        <repository>
+            <id>bubblecloud-cloudbees-release</id>
+            <name>bubblecloud-cloudbees-release</name>
+            <url>dav:https://repository-bubblecloud.forge.cloudbees.com/release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>bubblecloud-cloudbees-snapshot</id>
+            <name>bubblecloud-cloudbees-snapshot</name>
+            <url>dav:https://repository-bubblecloud.forge.cloudbees.com/snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>1.0-beta-7</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <dependencies>
+    </dependencies>
+
+</project>
+
