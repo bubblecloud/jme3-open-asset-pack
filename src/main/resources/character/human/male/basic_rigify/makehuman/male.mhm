@@ -1,0 +1,19 @@
+# Written by MakeHuman 1.0.2
+version v1.0.2
+tags male
+clothesHideFaces True
+gendered BreastFirmness 0.500000
+gendered BreastSize 0.500000
+macro Weight 0.500000
+macro Gender 1.000000
+macro Age 0.500000
+macro Height 0.500000
+macro Asian 0.333333
+macro African 0.333333
+macro Caucasian 0.333333
+macro Muscle 0.500000
+macro BodyProportions 0.500000
+background enabled False
+skinMaterial skins/young_caucasian_male/young_caucasian_male.mhmat
+skeleton basic.json
+subdivide False

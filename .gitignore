@@ -6,3 +6,9 @@ pom.xml.next
 release.properties
 .idea
 *.iml
+*.blend1
+*.blend2
+*.blend3
+*.blend4
+*.blend5
+*.thumb

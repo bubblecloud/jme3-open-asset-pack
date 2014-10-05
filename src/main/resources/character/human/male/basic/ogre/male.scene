@@ -1,0 +1,77 @@
+<scene export_time="1412520979.745106" exported_by="tlaukkan" formatVersion="1.0.1" previous_export_time="1412515793.564636" >
+  <nodes >
+    <node name="Armature" >
+      <position x="0.000000" z="-0.000000" y="0.000000" />
+      <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+      <scale x="1.000000" z="1.000000" y="1.000000" />
+      <user_data value="16" type="int" name="MhxVersion" />
+      <user_data value="0.1" type="float" name="MhxScale" />
+      <user_data value="1.0.2" type="str" name="MhVersion" />
+      <user_data value="hm08" type="str" name="MhBaseMesh" />
+      <user_data value="Basic" type="str" name="MhxRig" />
+      <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" name="MhxVersionStr" />
+      <user_data value="1" type="int" name="MhxShapekeyDrivers" />
+      <user_data value="1" type="int" name="MhAlpha8" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <node name="male" >
+        <position x="0.000000" z="-0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale x="1.000000" z="1.000000" y="1.000000" />
+        <user_data value="-0.0" type="float" name="MhxOffsetX" />
+        <user_data value="-0.0" type="float" name="MhxOffsetY" />
+        <user_data value="-0.0" type="float" name="MhxOffsetZ" />
+        <user_data value="1" type="int" name="MhxMesh" />
+        <user_data value="1" type="int" name="MhHuman" />
+        <user_data value="0.1" type="float" name="MhxScale" />
+        <user_data value="caucasian:0.3333_asian:0.3333_african:0.3333_gender:1.0000_age:0.5000_weight:0.5000_muscle:0.5000_height:0.5000_bodyProportions:0.5000_" type="str" name="MhxModel" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" name="MhxVersionStr" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_trans_x="False" anisotropic_friction="False" lock_trans_y="False" lock_rot_z="False" lock_trans_z="False" mass="1.0" lock_rot_x="False" actor="False" mass_radius="1.0" friction_z="1.0" friction_x="1.0" velocity_max="0.0" meshFile="male.mesh" velocity_min="0.0" inertia_tensor="0.4000000059604645" lock_rot_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" friction_y="1.0" name="male" ghost="False" physics_type="STATIC" />
+      </node>
+    </node>
+    <node name="Lamp" >
+      <position x="4.076245" z="-1.005454" y="5.903862" />
+      <rotation qz="-0.272171" qy="0.755880" qx="0.169076" qw="0.570947" />
+      <scale x="1.000000" z="1.000000" y="1.000000" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <light shadow="true" powerScale="1.0" type="point" name="Lamp" >
+        <position x="4.076245" z="-1.005454" y="5.903862" />
+        <lightAttenuation range="5000" quadratic="0.0" linear="0.03333335240683057" constant="1.0" />
+        <colourDiffuse r="1.0" g="1.0" b="1.0" />
+        <colourSpecular r="1.0" g="1.0" b="1.0" />
+        <colourShadow r="1.0" g="1.0" b="1.0" />
+      </light>
+    </node>
+    <node name="Camera" >
+      <position x="7.481132" z="6.507640" y="5.343665" />
+      <rotation qz="-0.212922" qy="0.334251" qx="0.481707" qw="0.781600" />
+      <scale x="1.000000" z="1.000000" y="1.000000" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <camera projectionType="perspective" fov="0.5033799435163735" name="Camera" >
+        <clipping farPlaneDist="100.0" far="100.0" near="0.10000000149011612" nearPlaneDist="0.10000000149011612" />
+      </camera>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="C:\Users\tlaukkan\Development\projects\jme3-open-asset-pack\src\main\resources\character\human\male\basic\ogre\male.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourDiffuse r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
+    <colourBackground r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
+    <colourAmbient r="0.0" g="0.0" b="0.0" />
+  </environment>
+</scene>
