@@ -15,5 +15,5 @@ macro Muscle 0.500000
 macro BodyProportions 0.500000
 background enabled False
 skinMaterial skins/young_caucasian_male/young_caucasian_male.mhmat
-skeleton game.json
+skeleton basic.json
 subdivide False
