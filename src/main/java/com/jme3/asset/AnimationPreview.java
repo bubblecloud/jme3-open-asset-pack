@@ -5,6 +5,7 @@ import com.jme3.animation.AnimControl;
 import com.jme3.animation.AnimEventListener;
 import com.jme3.animation.LoopMode;
 import com.jme3.app.SimpleApplication;
+import com.jme3.app.state.VideoRecorderAppState;
 import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
 import com.jme3.math.ColorRGBA;
@@ -15,6 +16,7 @@ import com.jme3.renderer.RenderManager;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -23,23 +25,31 @@ import java.util.ArrayList;
  */
 public class AnimationPreview extends SimpleApplication implements AnimEventListener {
 
-    public static final String WALK = "Walk";
-
     public static final String STAND = "Stand";
+
+    public static final String REST = "Rest";
+    public static final int ANIMATION_REPEAT_COUNT = 3;
+
+    int animCounter = 0;
 
     private Node player;
     private ArrayList<String> animations;
     private AnimChannel channel;
     private AnimControl control;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         AnimationPreview app = new AnimationPreview();
         final AppSettings appSettings = new AppSettings(true);
         appSettings.setSamples(4);
+        //appSettings.setFullscreen(true);
+        //appSettings.setResolution(1920, 1080);
         app.setSettings(appSettings);
         app.setShowSettings(false);
+
         app.start();
     }
+
+
 
     @Override
     public void simpleInitApp() {
@@ -59,49 +69,62 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
             control.addListener(this);
             animations = new ArrayList<>(control.getAnimationNames());
             animations.remove(STAND);
+            animations.remove(REST);
             System.out.println(animations);
             channel = control.createChannel();
-            channel.setAnim(STAND);
-            channel.setSpeed(1f);
+            channel.setAnim(REST);
+            channel.setSpeed(2f);
             channel.setLoopMode(LoopMode.DontLoop);
         }
-        cam.setLocation(new Vector3f(0, 0.5f, 4));
+        cam.setLocation(new Vector3f(0, 0.5f, 3f));
         cam.setRotation(
                 new Quaternion().fromAngleAxis(-FastMath.PI * 0.04f, new Vector3f(1, 0, 0)).mult(
                 new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
-    }
 
-    private long animChangeTime = System.currentTimeMillis() +  1000;
+        //stateManager.attach(new VideoRecorderAppState());
+    }
 
     @Override
     public void simpleRender(RenderManager rm) {
         super.simpleRender(rm);
-
-        if (System.currentTimeMillis() > animChangeTime) {
-            if (STAND.equals(channel.getAnimationName())) {
-                if (animations.size() > 0) {
-                    final String nextAnimation = animations.remove(0);
-                    System.out.println("Playing: " + nextAnimation);
-                    channel.setAnim(nextAnimation, 1f);
-                    channel.setLoopMode(LoopMode.DontLoop);
-                    animChangeTime = System.currentTimeMillis() + (int) (2000 * channel.getAnimMaxTime());
-                } else {
-                    System.exit(0);
-                }
-            } else {
-                channel.setAnim(STAND, 1f);
-                channel.setLoopMode(LoopMode.DontLoop);
-                animChangeTime = System.currentTimeMillis() + 1000;
-            }
-        }
-
     }
 
     @Override
     public void onAnimCycleDone(AnimControl animControl, AnimChannel animChannel, String name) {
-        if (!STAND.equals(name)) {
-            channel.setAnim(name, 1f);
+        if (animations.size() == 0 && REST.equals(channel.getAnimationName())) {
+            System.exit(0);
+        }
+
+        if ( REST.equals(channel.getAnimationName())) {
+            channel.setAnim(STAND, 1f);
+            channel.setSpeed(1f);
             channel.setLoopMode(LoopMode.DontLoop);
+            System.out.println("Playing beginning " + STAND);
+        } else if (!STAND.equals(name) && animCounter >= ANIMATION_REPEAT_COUNT) {
+            channel.setAnim(STAND, 0.5f);
+            channel.setSpeed(2f);
+            channel.setLoopMode(LoopMode.DontLoop);
+            System.out.println("Playing intermediate " + STAND);
+        } else {
+            if (animations.size() > 0 || animCounter < ANIMATION_REPEAT_COUNT) {
+                final String nextAnimation;
+                if (animCounter > 0 && animCounter < ANIMATION_REPEAT_COUNT) {
+                    nextAnimation = name;
+                    channel.setAnim(nextAnimation);
+                } else {
+                    animCounter = 0;
+                    nextAnimation =  animations.remove(0);
+                    channel.setAnim(nextAnimation, 0.5f);
+                }
+                channel.setLoopMode(LoopMode.DontLoop);
+                channel.setSpeed(1f);
+                System.out.println("Playing: " + nextAnimation);
+                animCounter ++;
+            } else {
+                channel.setAnim(REST, 1f);
+                channel.setLoopMode(LoopMode.DontLoop);
+                System.out.println("Playing final " + REST);
+            }
         }
     }
 
