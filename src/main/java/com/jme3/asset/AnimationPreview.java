@@ -71,21 +71,27 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
                 new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
     }
 
-    private long animChangeTime = System.currentTimeMillis() +  3000;
+    private long animChangeTime = System.currentTimeMillis() +  1000;
 
     @Override
     public void simpleRender(RenderManager rm) {
         super.simpleRender(rm);
 
         if (System.currentTimeMillis() > animChangeTime) {
-            if (animations.size() > 0) {
-                final String nextAnimation = animations.remove(0);
-                System.out.println("Playing: " + nextAnimation);
-                channel.setAnim(nextAnimation, 0.5f);
-                channel.setLoopMode(LoopMode.DontLoop);
-                animChangeTime = System.currentTimeMillis() + 4000;
+            if (STAND.equals(channel.getAnimationName())) {
+                if (animations.size() > 0) {
+                    final String nextAnimation = animations.remove(0);
+                    System.out.println("Playing: " + nextAnimation);
+                    channel.setAnim(nextAnimation, 1f);
+                    channel.setLoopMode(LoopMode.DontLoop);
+                    animChangeTime = System.currentTimeMillis() + (int) (2000 * channel.getAnimMaxTime());
+                } else {
+                    System.exit(0);
+                }
             } else {
-                System.exit(0);
+                channel.setAnim(STAND, 1f);
+                channel.setLoopMode(LoopMode.DontLoop);
+                animChangeTime = System.currentTimeMillis() + 1000;
             }
         }
 
@@ -94,9 +100,8 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
     @Override
     public void onAnimCycleDone(AnimControl animControl, AnimChannel animChannel, String name) {
         if (!STAND.equals(name)) {
-            channel.setAnim(STAND, 0.5f);
+            channel.setAnim(name, 1f);
             channel.setLoopMode(LoopMode.DontLoop);
-            animChangeTime = System.currentTimeMillis() + 500;
         }
     }
 
