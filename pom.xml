@@ -9,9 +9,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jmonkey.version>3.0.10</jmonkey.version>
     </properties>
 
     <repositories>
+        <repository>
+            <id>jmonkeyengine</id>
+            <name>jmonkeyengine</name>
+            <url>http://updates.jmonkeyengine.org/maven/</url>
+        </repository>
         <repository>
             <id>bubblecloud-cloudbees-release</id>
             <name>bubblecloud-cloudbees-release</name>
@@ -45,6 +51,29 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>jme3-core</artifactId>
+            <version>${jmonkey.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>jme3-desktop</artifactId>
+            <version>${jmonkey.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>jme3-plugins</artifactId>
+            <version>${jmonkey.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>jme3-lwjgl</artifactId>
+            <version>${jmonkey.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
