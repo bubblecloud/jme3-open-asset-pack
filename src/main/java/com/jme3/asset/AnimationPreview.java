@@ -5,51 +5,67 @@ import com.jme3.animation.AnimControl;
 import com.jme3.animation.AnimEventListener;
 import com.jme3.animation.LoopMode;
 import com.jme3.app.SimpleApplication;
-import com.jme3.app.state.VideoRecorderAppState;
 import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.FastMath;
 import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;
-import com.jme3.renderer.RenderManager;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
-import java.io.File;
 import java.util.ArrayList;
 
 /**
- * Sample 7 - how to load an OgreXML model and play an animation,
- * using channels, a controller, and an AnimEventListener.
+ * Application for reviewing character animations.
+ *
+ * @author Tommi S.E. Laukkanen
  */
 public class AnimationPreview extends SimpleApplication implements AnimEventListener {
 
+    /**
+     * The character model file.
+     */
+    public static final String CHARACTER_MODEL_FILE = "character/human/male/basic/ogre/male.mesh.xml";
+    /**
+     * Repeat count for animations.
+     */
+    public static final int ANIMATION_REPEAT_COUNT = 3;
+    /**
+     * Special pose used for begin and end.
+     */
+    public static final String REST = "Rest";
+    /**
+     * Special pose used between animations.
+     */
     public static final String STAND = "Stand";
 
-    public static final String REST = "Rest";
-    public static final int ANIMATION_REPEAT_COUNT = 3;
-
-    int animCounter = 0;
-
-    private Node player;
+    /**
+     * List of animations loaded from model file.
+     */
     private ArrayList<String> animations;
+    /**
+     * Animation channel used to play the animations.
+     */
     private AnimChannel channel;
-    private AnimControl control;
+    /**
+     * Number of times current animation has played so far.
+     */
+    private int playCounter = 0;
 
+    /**
+     * Main class used to run the animation preview from command line.
+     * @param args the command line arguments
+     * @throws Exception if exception occurs during execution
+     */
     public static void main(String[] args) throws Exception {
         AnimationPreview app = new AnimationPreview();
         final AppSettings appSettings = new AppSettings(true);
         appSettings.setSamples(4);
-        //appSettings.setFullscreen(true);
-        //appSettings.setResolution(1920, 1080);
         app.setSettings(appSettings);
         app.setShowSettings(false);
-
         app.start();
     }
-
-
 
     @Override
     public void simpleInitApp() {
@@ -62,9 +78,9 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
         rootNode.addLight(dl);
         rootNode.addLight(new AmbientLight());
 
-        player = (Node) assetManager.loadModel("character/human/male/basic/ogre/male.mesh.xml");
+        final Node player = (Node) assetManager.loadModel(CHARACTER_MODEL_FILE);
         rootNode.attachChild(player);
-        control = player.getControl(AnimControl.class);
+        final AnimControl control = player.getControl(AnimControl.class);
         if (control != null) {
             control.addListener(this);
             animations = new ArrayList<>(control.getAnimationNames());
@@ -85,11 +101,6 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
     }
 
     @Override
-    public void simpleRender(RenderManager rm) {
-        super.simpleRender(rm);
-    }
-
-    @Override
     public void onAnimCycleDone(AnimControl animControl, AnimChannel animChannel, String name) {
         if (animations.size() == 0 && REST.equals(channel.getAnimationName())) {
             System.exit(0);
@@ -100,26 +111,26 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
             channel.setSpeed(1f);
             channel.setLoopMode(LoopMode.DontLoop);
             System.out.println("Playing beginning " + STAND);
-        } else if (!STAND.equals(name) && animCounter >= ANIMATION_REPEAT_COUNT) {
+        } else if (!STAND.equals(name) && playCounter >= ANIMATION_REPEAT_COUNT) {
             channel.setAnim(STAND, 0.5f);
             channel.setSpeed(2f);
             channel.setLoopMode(LoopMode.DontLoop);
             System.out.println("Playing intermediate " + STAND);
         } else {
-            if (animations.size() > 0 || animCounter < ANIMATION_REPEAT_COUNT) {
+            if (animations.size() > 0 || playCounter < ANIMATION_REPEAT_COUNT) {
                 final String nextAnimation;
-                if (animCounter > 0 && animCounter < ANIMATION_REPEAT_COUNT) {
+                if (playCounter > 0 && playCounter < ANIMATION_REPEAT_COUNT) {
                     nextAnimation = name;
                     channel.setAnim(nextAnimation);
                 } else {
-                    animCounter = 0;
+                    playCounter = 0;
                     nextAnimation =  animations.remove(0);
                     channel.setAnim(nextAnimation, 0.5f);
                 }
                 channel.setLoopMode(LoopMode.DontLoop);
                 channel.setSpeed(1f);
                 System.out.println("Playing: " + nextAnimation);
-                animCounter ++;
+                playCounter++;
             } else {
                 channel.setAnim(REST, 1f);
                 channel.setLoopMode(LoopMode.DontLoop);
