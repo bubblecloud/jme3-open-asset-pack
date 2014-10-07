@@ -1,6 +1,9 @@
 # Written by MakeHuman 1.0.2
 version v1.0.2
 tags male
+eyes HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6
+clothes Tshirt_short 553a8752-3213-4284-b790-6390ccafb8f8
+clothes jeans01 faa58a00-05db-4a53-a3a6-72af1cec2053
 clothesHideFaces True
 gendered BreastFirmness 0.500000
 gendered BreastSize 0.500000
@@ -15,5 +18,6 @@ macro Muscle 0.500000
 macro BodyProportions 0.500000
 background enabled False
 skinMaterial skins/young_caucasian_male/young_caucasian_male.mhmat
+material HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6 eyes/materials/brown.mhmat
 skeleton basic.json
 subdivide False
