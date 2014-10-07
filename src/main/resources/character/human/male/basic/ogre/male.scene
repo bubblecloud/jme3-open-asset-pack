@@ -1,68 +1,68 @@
-<scene previous_export_time="1412624560.2672" exported_by="tlaukkan" export_time="1412624635.648213" formatVersion="1.0.1" >
+<scene exported_by="tlaukkan" export_time="1412705837.596722" previous_export_time="1412705811.401547" formatVersion="1.0.1" >
   <nodes >
     <node name="Armature" >
       <position x="0.000000" y="0.000000" z="-0.000000" />
-      <rotation qy="0.000000" qw="1.000000" qz="-0.000000" qx="0.000000" />
+      <rotation qw="1.000000" qy="0.000000" qz="-0.000000" qx="0.000000" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
-      <user_data value="16" name="MhxVersion" type="int" />
-      <user_data value="0.1" name="MhxScale" type="float" />
-      <user_data value="1.0.2" name="MhVersion" type="str" />
-      <user_data value="hm08" name="MhBaseMesh" type="str" />
-      <user_data value="Basic" name="MhxRig" type="str" />
-      <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
-      <user_data value="1" name="MhxShapekeyDrivers" type="int" />
-      <user_data value="1" name="MhAlpha8" type="int" />
+      <user_data name="MhxVersion" type="int" value="16" />
+      <user_data name="MhxScale" type="float" value="0.1" />
+      <user_data name="MhVersion" type="str" value="1.0.2" />
+      <user_data name="MhBaseMesh" type="str" value="hm08" />
+      <user_data name="MhxRig" type="str" value="Basic" />
+      <user_data name="MhxVersionStr" type="str" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" />
+      <user_data name="MhxShapekeyDrivers" type="int" value="1" />
+      <user_data name="MhAlpha8" type="int" value="1" />
       <game >
         <sensors />
         <actuators />
       </game>
       <node name="male" >
         <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qw="1.000000" qz="-0.000000" qx="0.000000" />
+        <rotation qw="1.000000" qy="0.000000" qz="-0.000000" qx="0.000000" />
         <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data value="-0.0" name="MhxOffsetX" type="float" />
-        <user_data value="-0.0" name="MhxOffsetY" type="float" />
-        <user_data value="-0.0" name="MhxOffsetZ" type="float" />
-        <user_data value="1" name="MhxMesh" type="int" />
-        <user_data value="1" name="MhHuman" type="int" />
-        <user_data value="0.1" name="MhxScale" type="float" />
-        <user_data value="caucasian:0.3333_asian:0.3333_african:0.3333_gender:1.0000_age:0.5000_weight:0.5000_muscle:0.5000_height:0.5000_bodyProportions:0.5000_" name="MhxModel" type="str" />
-        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
-        <user_data value="100" name="uid" type="int" />
+        <user_data name="MhxOffsetX" type="float" value="-0.0" />
+        <user_data name="MhxOffsetY" type="float" value="-0.0" />
+        <user_data name="MhxOffsetZ" type="float" value="-0.0" />
+        <user_data name="MhxMesh" type="int" value="1" />
+        <user_data name="MhHuman" type="int" value="1" />
+        <user_data name="MhxScale" type="float" value="0.1" />
+        <user_data name="MhxModel" type="str" value="caucasian:0.3333_asian:0.3333_african:0.3333_gender:1.0000_age:0.5000_weight:0.5000_muscle:0.5000_height:0.5000_bodyProportions:0.5000_" />
+        <user_data name="MhxVersionStr" type="str" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" />
+        <user_data name="uid" type="int" value="100" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity mass_radius="1.0" physics_type="STATIC" mass="1.0" velocity_min="0.0" anisotropic_friction="False" friction_x="1.0" lock_trans_z="False" damping_rot="0.10000000149011612" ghost="False" lock_trans_y="False" lock_rot_y="False" lock_rot_z="False" inertia_tensor="0.4000000059604645" velocity_max="0.0" friction_y="1.0" name="male" actor="False" meshFile="male.mesh" friction_z="1.0" lock_rot_x="False" damping_trans="0.03999999910593033" lock_trans_x="False" />
+        <entity damping_trans="0.03999999910593033" friction_x="1.0" meshFile="male.mesh" friction_y="1.0" anisotropic_friction="False" physics_type="STATIC" mass="1.0" mass_radius="1.0" lock_rot_y="False" lock_rot_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" velocity_min="0.0" actor="False" lock_trans_x="False" lock_trans_y="False" damping_rot="0.10000000149011612" lock_rot_z="False" name="male" friction_z="1.0" ghost="False" velocity_max="0.0" />
       </node>
     </node>
     <node name="Lamp" >
       <position x="4.076245" y="5.903862" z="-1.005454" />
-      <rotation qy="0.755880" qw="0.570947" qz="-0.272171" qx="0.169076" />
+      <rotation qw="0.570947" qy="0.755880" qz="-0.272171" qx="0.169076" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
-      <user_data value="101" name="uid" type="int" />
+      <user_data name="uid" type="int" value="101" />
       <game >
         <sensors />
         <actuators />
       </game>
-      <light type="point" powerScale="1.0" shadow="true" name="Lamp" >
+      <light name="Lamp" powerScale="1.0" type="point" shadow="true" >
         <position x="4.076245" y="5.903862" z="-1.005454" />
         <lightAttenuation range="5000" constant="1.0" linear="0.03333335240683057" quadratic="0.0" />
-        <colourDiffuse r="1.0" b="1.0" g="1.0" />
-        <colourSpecular r="1.0" b="1.0" g="1.0" />
-        <colourShadow r="1.0" b="1.0" g="1.0" />
+        <colourDiffuse r="1.0" g="1.0" b="1.0" />
+        <colourSpecular r="1.0" g="1.0" b="1.0" />
+        <colourShadow r="1.0" g="1.0" b="1.0" />
       </light>
     </node>
     <node name="Camera" >
       <position x="7.481132" y="5.343665" z="6.507640" />
-      <rotation qy="0.334251" qw="0.781600" qz="-0.212922" qx="0.481707" />
+      <rotation qw="0.781600" qy="0.334251" qz="-0.212922" qx="0.481707" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
       <game >
         <sensors />
         <actuators />
       </game>
-      <camera fov="0.5033799435163735" name="Camera" projectionType="perspective" >
-        <clipping farPlaneDist="100.0" far="100.0" nearPlaneDist="0.10000000149011612" near="0.10000000149011612" />
+      <camera name="Camera" fov="0.5033799435163735" projectionType="perspective" >
+        <clipping near="0.10000000149011612" farPlaneDist="100.0" far="100.0" nearPlaneDist="0.10000000149011612" />
       </camera>
     </node>
   </nodes>
@@ -72,8 +72,8 @@
     </item>
   </externals>
   <environment >
-    <colourDiffuse r="0.05087608844041824" b="0.05087608844041824" g="0.05087608844041824" />
-    <colourAmbient r="0.0" b="0.0" g="0.0" />
-    <colourBackground r="0.05087608844041824" b="0.05087608844041824" g="0.05087608844041824" />
+    <colourAmbient r="0.0" g="0.0" b="0.0" />
+    <colourDiffuse r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
+    <colourBackground r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
   </environment>
 </scene>
