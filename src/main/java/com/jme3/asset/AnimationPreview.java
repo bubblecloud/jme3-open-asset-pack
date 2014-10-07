@@ -5,6 +5,7 @@ import com.jme3.animation.AnimControl;
 import com.jme3.animation.AnimEventListener;
 import com.jme3.animation.LoopMode;
 import com.jme3.app.SimpleApplication;
+import com.jme3.app.state.VideoRecorderAppState;
 import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
 import com.jme3.math.ColorRGBA;
@@ -128,7 +129,7 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
                     channel.setAnim(nextAnimation, 0.5f);
                 }
                 channel.setLoopMode(LoopMode.DontLoop);
-                channel.setSpeed(1f);
+                channel.setSpeed(1.5f);
                 System.out.println("Playing: " + nextAnimation);
                 playCounter++;
             } else {

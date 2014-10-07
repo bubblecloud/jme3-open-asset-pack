@@ -14,15 +14,15 @@ material _missing_material_
     }
 }
 
-// male:Skin genrated by blender2ogre 0.6.0
+// male:Skin.001 genrated by blender2ogre 0.6.0
 
-material male:Skin 
+material male:Skin.001 
 {
     receive_shadows on 
 
     technique
     {
-        pass male:Skin
+        pass male:Skin.001
         {
             ambient 1.0 1.0 1.0 0.0
             diffuse 1.0 1.0 1.0 0.0
@@ -56,15 +56,15 @@ material male:Skin
         }
     }
 }
-// male:Invisio genrated by blender2ogre 0.6.0
+// male:Invisio.001 genrated by blender2ogre 0.6.0
 
-material male:Invisio 
+material male:Invisio.001 
 {
     receive_shadows off 
 
     technique
     {
-        pass male:Invisio
+        pass male:Invisio.001
         {
             ambient 1.0 1.0 1.0 0.0
             diffuse 0.800000011920929 0.800000011920929 0.800000011920929 0.0
@@ -91,15 +91,15 @@ material male:Invisio
         }
     }
 }
-// male:Red genrated by blender2ogre 0.6.0
+// male:Red.001 genrated by blender2ogre 0.6.0
 
-material male:Red 
+material male:Red.001 
 {
     receive_shadows off 
 
     technique
     {
-        pass male:Red
+        pass male:Red.001
         {
             ambient 1.0 0.0 0.0 0.0
             diffuse 0.800000011920929 0.0 0.0 0.0
@@ -126,15 +126,15 @@ material male:Red
         }
     }
 }
-// male:Green genrated by blender2ogre 0.6.0
+// male:Green.001 genrated by blender2ogre 0.6.0
 
-material male:Green 
+material male:Green.001 
 {
     receive_shadows off 
 
     technique
     {
-        pass male:Green
+        pass male:Green.001
         {
             ambient 0.0 1.0 0.0 0.0
             diffuse 0.0 0.800000011920929 0.0 0.0
@@ -161,15 +161,15 @@ material male:Green
         }
     }
 }
-// male:Blue genrated by blender2ogre 0.6.0
+// male:Blue.001 genrated by blender2ogre 0.6.0
 
-material male:Blue 
+material male:Blue.001 
 {
     receive_shadows off 
 
     technique
     {
-        pass male:Blue
+        pass male:Blue.001
         {
             ambient 0.0 0.0 1.0 0.0
             diffuse 0.0 0.0 0.800000011920929 0.0
@@ -196,15 +196,15 @@ material male:Blue
         }
     }
 }
-// male:Yellow genrated by blender2ogre 0.6.0
+// male:Yellow.001 genrated by blender2ogre 0.6.0
 
-material male:Yellow 
+material male:Yellow.001 
 {
     receive_shadows off 
 
     technique
     {
-        pass male:Yellow
+        pass male:Yellow.001
         {
             ambient 1.0 1.0 0.0 0.0
             diffuse 0.800000011920929 0.800000011920929 0.0 0.0
@@ -228,6 +228,153 @@ material male:Yellow
             shading gouraud
             transparent_sorting on
 
+        }
+    }
+}
+// male:HighPolyEyes:Eye_brown genrated by blender2ogre 0.6.0
+
+material male:HighPolyEyes:Eye_brown 
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass male:HighPolyEyes:Eye_brown
+        {
+            ambient 1.0 1.0 1.0 0.0
+            diffuse 1.0 1.0 1.0 0.0
+            specular 1.0 1.0 1.0 0.0 127.75
+            emissive 0.0 0.0 0.0 0.0
+
+            alpha_to_coverage off
+            colour_write on
+            cull_hardware clockwise
+            depth_check on
+            depth_func less_equal
+            depth_write on
+            illumination_stage 
+            light_clip_planes off
+            light_scissor off
+            lighting on
+            normalise_normals off
+            polygon_mode solid
+            scene_blend one zero
+            scene_blend_op add
+            shading gouraud
+            transparent_sorting on
+
+            texture_unit 
+            {
+                texture brown_eye.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+// male:Tshirt_short:BlueTShirt genrated by blender2ogre 0.6.0
+
+material male:Tshirt_short:BlueTShirt 
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass male:Tshirt_short:BlueTShirt
+        {
+            ambient 1.0 1.0 1.0 0.0
+            diffuse 1.0 1.0 1.0 0.0
+            specular 0.02745000086724758 0.02745000086724758 0.02745000086724758 0.0 102.25
+            emissive 0.0 0.0 0.0 0.0
+
+            alpha_to_coverage off
+            colour_write on
+            cull_hardware clockwise
+            depth_check on
+            depth_func less_equal
+            depth_write on
+            illumination_stage 
+            light_clip_planes off
+            light_scissor off
+            lighting on
+            normalise_normals off
+            polygon_mode solid
+            scene_blend one zero
+            scene_blend_op add
+            shading gouraud
+            transparent_sorting on
+
+            texture_unit 
+            {
+                texture tshirt_texture_blue.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                colour_op alpha_blend
+            }
+            texture_unit 
+            {
+                texture tshirt_normal.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                colour_op modulate
+            }
+            texture_unit 
+            {
+                texture tshirt_displacement.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                colour_op modulate
+            }
+        }
+    }
+}
+// male:jeans01:jeans01Material genrated by blender2ogre 0.6.0
+
+material male:jeans01:jeans01Material 
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass male:jeans01:jeans01Material
+        {
+            ambient 1.0 1.0 1.0 0.0
+            diffuse 1.0 1.0 1.0 0.0
+            specular 0.02745000086724758 0.02745000086724758 0.02745000086724758 0.0 25.0
+            emissive 0.0 0.0 0.0 0.0
+
+            alpha_to_coverage off
+            colour_write on
+            cull_hardware clockwise
+            depth_check on
+            depth_func less_equal
+            depth_write on
+            illumination_stage 
+            light_clip_planes off
+            light_scissor off
+            lighting on
+            normalise_normals off
+            polygon_mode solid
+            scene_blend one zero
+            scene_blend_op add
+            shading gouraud
+            transparent_sorting on
+
+            texture_unit 
+            {
+                texture jeans_basic_diffuse.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                colour_op alpha_blend
+            }
+            texture_unit 
+            {
+                texture jeans01_normals.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                colour_op modulate
+            }
         }
     }
 }

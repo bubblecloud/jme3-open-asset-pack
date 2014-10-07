@@ -1,4 +1,4 @@
-<scene exported_by="tlaukkan" export_time="1412705837.596722" previous_export_time="1412705811.401547" formatVersion="1.0.1" >
+<scene exported_by="tlaukkan" export_time="1412706719.1062" previous_export_time="1412706619.255287" formatVersion="1.0.1" >
   <nodes >
     <node name="Armature" >
       <position x="0.000000" y="0.000000" z="-0.000000" />
@@ -10,7 +10,7 @@
       <user_data name="MhBaseMesh" type="str" value="hm08" />
       <user_data name="MhxRig" type="str" value="Basic" />
       <user_data name="MhxVersionStr" type="str" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" />
-      <user_data name="MhxShapekeyDrivers" type="int" value="1" />
+      <user_data name="MhxShapekeyDrivers" type="int" value="0" />
       <user_data name="MhAlpha8" type="int" value="1" />
       <game >
         <sensors />
@@ -28,7 +28,6 @@
         <user_data name="MhxScale" type="float" value="0.1" />
         <user_data name="MhxModel" type="str" value="caucasian:0.3333_asian:0.3333_african:0.3333_gender:1.0000_age:0.5000_weight:0.5000_muscle:0.5000_height:0.5000_bodyProportions:0.5000_" />
         <user_data name="MhxVersionStr" type="str" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" />
-        <user_data name="uid" type="int" value="100" />
         <game >
           <sensors />
           <actuators />
