@@ -1,11 +1,8 @@
 package com.jme3.asset;
 
-import com.jme3.animation.AnimChannel;
 import com.jme3.animation.AnimControl;
-import com.jme3.animation.AnimEventListener;
 import com.jme3.animation.LoopMode;
 import com.jme3.app.SimpleApplication;
-import com.jme3.app.state.VideoRecorderAppState;
 import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
 import com.jme3.math.ColorRGBA;
@@ -15,7 +12,6 @@ import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -23,7 +19,7 @@ import java.util.ArrayList;
  *
  * @author Tommi S.E. Laukkanen
  */
-public class AnimationPreview extends SimpleApplication implements AnimEventListener {
+public class AnimationPreview extends SimpleApplication implements CharacterAnimatorListener {
 
     /**
      * The character model file.
@@ -61,9 +57,10 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
     public static void main(String[] args) throws Exception {
         AnimationPreview app = new AnimationPreview();
         final AppSettings appSettings = new AppSettings(true);
-        appSettings.setFullscreen(true);
-        appSettings.setResolution(1920, 1080);
-        appSettings.setSamples(8);
+        //appSettings.setFullscreen(true);
+        //appSettings.setResolution(1920, 1080);
+        //appSettings.setSamples(4);
+        appSettings.setVSync(true);
         app.setSettings(appSettings);
         app.setShowSettings(false);
         app.start();
@@ -83,16 +80,11 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
         al.setColor(ColorRGBA.LightGray);
         rootNode.addLight(al);
 
-        cam.setLocation(new Vector3f(0, 1.5f, 3f));
-        cam.setRotation(
-                new Quaternion().fromAngleAxis(-FastMath.PI * 0.04f, new Vector3f(1, 0, 0)).mult(
-                        new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
-
-
         final Node player = (Node) assetManager.loadModel(CHARACTER_MODEL_FILE);
         rootNode.attachChild(player);
 
         animator = new CharacterAnimator(player);
+        animator.setCharacterAnimatorListener(this);
 
         System.out.println(animator.getSpatialNamesWithAnimations());
 
@@ -111,7 +103,6 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
 
         final AnimControl control = animator.getAnimControl(mainSpatialName);
         if (control != null) {
-            control.addListener(this);
             animations = new ArrayList<>(control.getAnimationNames());
             animations.remove(STAND);
             animations.remove(REST);
@@ -120,25 +111,37 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
         }
 
         //stateManager.attach(new VideoRecorderAppState());
+
+        cam.setLocation(new Vector3f(0, 1.5f, 3f));
+        cam.setRotation(
+                new Quaternion().fromAngleAxis(-FastMath.PI * 0.04f, new Vector3f(1, 0, 0)).mult(
+                        new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
+
     }
 
     @Override
-    public void onAnimCycleDone(AnimControl animControl, AnimChannel animChannel, String name) {
-        if (animations.size() == 0 && REST.equals(animChannel.getAnimationName())) {
+    public void simpleUpdate(float tpf) {
+        super.simpleUpdate(tpf);
+        animator.update(tpf);
+    }
+
+    @Override
+    public void onAnimCycleDone(final String animationName) {
+        if (animations.size() == 0 && REST.equals(animator.getAnimationName())) {
             System.exit(0);
         }
 
-        if (REST.equals(animChannel.getAnimationName())) {
+        if (REST.equals(animator.getAnimationName())) {
             animator.animate(STAND, 1f, 1f, LoopMode.DontLoop);
             System.out.println("Playing beginning " + STAND);
-        } else if (!STAND.equals(name) && playCounter >= ANIMATION_REPEAT_COUNT) {
+        } else if (!STAND.equals(animationName) && playCounter >= ANIMATION_REPEAT_COUNT) {
             animator.animate(STAND, 2f, 0.5f, LoopMode.DontLoop);
             System.out.println("Playing intermediate " + STAND);
         } else {
             if (animations.size() > 0 || playCounter < ANIMATION_REPEAT_COUNT) {
                 final String nextAnimation;
                 if (playCounter > 0 && playCounter < ANIMATION_REPEAT_COUNT) {
-                    nextAnimation = name;
+                    nextAnimation = animationName;
                     animator.animate(nextAnimation, 1.5f, 0.5f, LoopMode.DontLoop);
                 } else {
                     playCounter = 0;
@@ -154,8 +157,4 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
         }
     }
 
-    @Override
-    public void onAnimChange(AnimControl animControl, AnimChannel animChannel, String s) {
-
-    }
 }

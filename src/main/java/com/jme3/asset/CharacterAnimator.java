@@ -1,8 +1,6 @@
 package com.jme3.asset;
 
-import com.jme3.animation.AnimChannel;
-import com.jme3.animation.AnimControl;
-import com.jme3.animation.LoopMode;
+import com.jme3.animation.*;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.SceneGraphVisitorAdapter;
@@ -24,10 +22,36 @@ public class CharacterAnimator {
      * Character animation channels.
      */
     final Map<String, AnimChannel> animChannels = new HashMap<>();
+
+    /**
+     * The character animator listener.
+     */
+    private CharacterAnimatorListener characterAnimatorListener;
+
     /**
      * Name of the last animation played.
      */
-    String lastAnimation = null;
+    private String animationName = null;
+
+    /**
+     * The animation speed multiplier.
+     */
+    private float speedMultiplier = 0f;
+
+    /**
+     * The animation loop mode.
+     */
+    private LoopMode loopMode = LoopMode.DontLoop;
+
+    /**
+     * The animation max time.
+     */
+    private float animationMaxTime = 0f;
+
+    /**
+     * The animation time.
+     */
+    private float animationTime = 0f;
 
     /**
      * Constructor which gets animation controls from character spatial recursively
@@ -69,25 +93,31 @@ public class CharacterAnimator {
     /**
      * Plays animation.
      *
-     * @param animation the animation
+     * @param animationName the animation
      * @param speedMultiplier the speed multiplier (1 = animation native speed, 2 = double speed...)
      * @param blendTime the blend time in seconds
      * @param loopMode the animation loop mode
      */
-    public void animate(final String animation, final float speedMultiplier, final float blendTime,
+    public void animate(final String animationName, final float speedMultiplier, final float blendTime,
                         final LoopMode loopMode) {
-        lastAnimation = animation;
+        this.animationName = animationName;
+        this.speedMultiplier = speedMultiplier;
+        this.animationTime = 0;
+        this.animationMaxTime = 0;
+        this.loopMode = loopMode;
         for (final String spatialName : animChannels.keySet()) {
             final AnimControl animControl = animControls.get(spatialName);
-            if (animControl.getAnim(animation) != null) {
+            final Animation animation = animControl.getAnim(animationName);
+            if (animation != null) {
                 final AnimChannel animChannel = animChannels.get(spatialName);
                 if (blendTime != 0) {
-                    animChannel.setAnim(animation, blendTime);
+                    animChannel.setAnim(animationName, blendTime);
                 } else {
-                    animChannel.setAnim(animation);
+                    animChannel.setAnim(animationName);
                 }
-                animChannel.setSpeed(speedMultiplier);
                 animChannel.setLoopMode(loopMode);
+                animChannel.setSpeed(speedMultiplier);
+                this. animationMaxTime = animChannel.getAnimMaxTime();
             }
         }
     }
@@ -113,7 +143,36 @@ public class CharacterAnimator {
      * Gets last animation played.
      * @return the last animation name or null
      */
-    public String getLastAnimation() {
-        return lastAnimation;
+    public String getAnimationName() {
+        return animationName;
+    }
+
+    /**
+     * Updates animation manually.
+     * @param tpf time per frame
+     */
+    public void update(final float tpf) {
+        if (animationTime > 0f && animationTime > animationMaxTime) {
+            if (loopMode == LoopMode.DontLoop) {
+                speedMultiplier = 0f;
+                characterAnimatorListener.onAnimCycleDone(animationName);
+            }
+            animationTime = 0f;
+        }
+
+        animationTime = animationTime + speedMultiplier * tpf;
+
+        for (final AnimChannel channel : animChannels.values()) {
+            channel.setSpeed(0f);
+            channel.setTime(animationTime);
+        }
+    }
+
+    /**
+     * Sets character animator listener.
+     * @param characterAnimatorListener the character animator listener
+     */
+    public void setCharacterAnimatorListener(final CharacterAnimatorListener characterAnimatorListener) {
+        this.characterAnimatorListener = characterAnimatorListener;
     }
 }
