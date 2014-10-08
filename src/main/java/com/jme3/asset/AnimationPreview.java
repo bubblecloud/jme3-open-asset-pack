@@ -15,6 +15,7 @@ import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -27,7 +28,7 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
     /**
      * The character model file.
      */
-    public static final String CHARACTER_MODEL_FILE = "character/human/male/basic/ogre/male.mesh.xml";
+    public static final String CHARACTER_MODEL_FILE = "character/human/male/basic/ogre/male.scene";
     /**
      * Repeat count for animations.
      */
@@ -40,19 +41,17 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
      * Special pose used between animations.
      */
     public static final String STAND = "Stand";
+    public static final String MAIN_MESH_NAME = "male";
 
     /**
      * List of animations loaded from model file.
      */
     private ArrayList<String> animations;
     /**
-     * Animation channel used to play the animations.
-     */
-    private AnimChannel channel;
-    /**
      * Number of times current animation has played so far.
      */
     private int playCounter = 0;
+    private CharacterAnimator animator;
 
     /**
      * Main class used to run the animation preview from command line.
@@ -62,7 +61,9 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
     public static void main(String[] args) throws Exception {
         AnimationPreview app = new AnimationPreview();
         final AppSettings appSettings = new AppSettings(true);
-        appSettings.setSamples(4);
+        appSettings.setFullscreen(true);
+        appSettings.setResolution(1920, 1080);
+        appSettings.setSamples(8);
         app.setSettings(appSettings);
         app.setShowSettings(false);
         app.start();
@@ -72,69 +73,82 @@ public class AnimationPreview extends SimpleApplication implements AnimEventList
     public void simpleInitApp() {
         setDisplayStatView(false);
         setDisplayFps(false);
-        viewPort.setBackgroundColor(ColorRGBA.White);
+        viewPort.setBackgroundColor(ColorRGBA.LightGray);
 
-        DirectionalLight dl = new DirectionalLight();
+        final DirectionalLight dl = new DirectionalLight();
+        dl.setColor(ColorRGBA.LightGray);
         dl.setDirection(new Vector3f(-0.1f, -1f, -1).normalizeLocal());
         rootNode.addLight(dl);
-        rootNode.addLight(new AmbientLight());
+        final AmbientLight al = new AmbientLight();
+        al.setColor(ColorRGBA.LightGray);
+        rootNode.addLight(al);
+
+        cam.setLocation(new Vector3f(0, 1.5f, 3f));
+        cam.setRotation(
+                new Quaternion().fromAngleAxis(-FastMath.PI * 0.04f, new Vector3f(1, 0, 0)).mult(
+                        new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
+
 
         final Node player = (Node) assetManager.loadModel(CHARACTER_MODEL_FILE);
         rootNode.attachChild(player);
-        final AnimControl control = player.getControl(AnimControl.class);
+
+        animator = new CharacterAnimator(player);
+
+        System.out.println(animator.getSpatialNamesWithAnimations());
+
+        String mainSpatialName = null;
+        for (final String spatialName : animator.getSpatialNamesWithAnimations()) {
+            if (spatialName.startsWith(MAIN_MESH_NAME)) {
+                mainSpatialName =  spatialName;
+            }
+        }
+
+        if (mainSpatialName == null) {
+            return;
+        }
+
+        System.out.println("Main mesh: " + animator.getSpatialNamesWithAnimations());
+
+        final AnimControl control = animator.getAnimControl(mainSpatialName);
         if (control != null) {
             control.addListener(this);
             animations = new ArrayList<>(control.getAnimationNames());
             animations.remove(STAND);
             animations.remove(REST);
             System.out.println(animations);
-            channel = control.createChannel();
-            channel.setAnim(REST);
-            channel.setSpeed(2f);
-            channel.setLoopMode(LoopMode.DontLoop);
+            animator.animate(REST, 1f, 2f, LoopMode.DontLoop);
         }
-        cam.setLocation(new Vector3f(0, 0.5f, 3f));
-        cam.setRotation(
-                new Quaternion().fromAngleAxis(-FastMath.PI * 0.04f, new Vector3f(1, 0, 0)).mult(
-                new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
 
         //stateManager.attach(new VideoRecorderAppState());
     }
 
     @Override
     public void onAnimCycleDone(AnimControl animControl, AnimChannel animChannel, String name) {
-        if (animations.size() == 0 && REST.equals(channel.getAnimationName())) {
+        if (animations.size() == 0 && REST.equals(animChannel.getAnimationName())) {
             System.exit(0);
         }
 
-        if ( REST.equals(channel.getAnimationName())) {
-            channel.setAnim(STAND, 1f);
-            channel.setSpeed(1f);
-            channel.setLoopMode(LoopMode.DontLoop);
+        if (REST.equals(animChannel.getAnimationName())) {
+            animator.animate(STAND, 1f, 1f, LoopMode.DontLoop);
             System.out.println("Playing beginning " + STAND);
         } else if (!STAND.equals(name) && playCounter >= ANIMATION_REPEAT_COUNT) {
-            channel.setAnim(STAND, 0.5f);
-            channel.setSpeed(2f);
-            channel.setLoopMode(LoopMode.DontLoop);
+            animator.animate(STAND, 2f, 0.5f, LoopMode.DontLoop);
             System.out.println("Playing intermediate " + STAND);
         } else {
             if (animations.size() > 0 || playCounter < ANIMATION_REPEAT_COUNT) {
                 final String nextAnimation;
                 if (playCounter > 0 && playCounter < ANIMATION_REPEAT_COUNT) {
                     nextAnimation = name;
-                    channel.setAnim(nextAnimation);
+                    animator.animate(nextAnimation, 1.5f, 0.5f, LoopMode.DontLoop);
                 } else {
                     playCounter = 0;
                     nextAnimation =  animations.remove(0);
-                    channel.setAnim(nextAnimation, 0.5f);
+                    animator.animate(nextAnimation, 1.5f, 0.5f, LoopMode.DontLoop);
                 }
-                channel.setLoopMode(LoopMode.DontLoop);
-                channel.setSpeed(1.5f);
                 System.out.println("Playing: " + nextAnimation);
                 playCounter++;
             } else {
-                channel.setAnim(REST, 1f);
-                channel.setLoopMode(LoopMode.DontLoop);
+                animator.animate(REST,  1f,  1f, LoopMode.DontLoop);
                 System.out.println("Playing final " + REST);
             }
         }

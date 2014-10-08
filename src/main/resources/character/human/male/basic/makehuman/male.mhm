@@ -1,15 +1,17 @@
 # Written by MakeHuman 1.0.2
 version v1.0.2
 tags male
+hair mhair02 f81a4e9a-e3d7-4ecb-bdf0-16d7fd9070a4
+eyebrows Eyebrow008 19e43555-4613-4457-ac6e-c30bf350d275
 eyes HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6
-clothes Tshirt_short 553a8752-3213-4284-b790-6390ccafb8f8
 clothes jeans01 faa58a00-05db-4a53-a3a6-72af1cec2053
+clothes Tshirt01 ea986be3-a9df-48e9-9f73-80a02ec1db61
 clothesHideFaces True
 gendered BreastFirmness 0.500000
 gendered BreastSize 0.500000
 macro Weight 0.500000
 macro Gender 1.000000
-macro Age 0.500000
+macro Age 0.694000
 macro Height 0.500000
 macro Asian 0.333333
 macro African 0.333333
@@ -18,6 +20,8 @@ macro Muscle 0.500000
 macro BodyProportions 0.500000
 background enabled False
 skinMaterial skins/young_caucasian_male/young_caucasian_male.mhmat
-material HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6 eyes/materials/brown.mhmat
+material jeans01 faa58a00-05db-4a53-a3a6-72af1cec2053 clothes/jeans01/jeans01_black_leather.mhmat
+material mhair02 f81a4e9a-e3d7-4ecb-bdf0-16d7fd9070a4 hair/mhair02/materials/male02_black.mhmat
+material HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6 eyes/materials/blue.mhmat
 skeleton basic.json
 subdivide False
