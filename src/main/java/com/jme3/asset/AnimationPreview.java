@@ -24,7 +24,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
     /**
      * The character model file.
      */
-    public static final String CHARACTER_MODEL_FILE = "character/human/male/basic/ogre/male.scene";
+    public static final String CHARACTER_MODEL_FILE = "character/human/female/ogre/female.scene";
     /**
      * Repeat count for animations.
      */
@@ -37,7 +37,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
      * Special pose used between animations.
      */
     public static final String STAND = "Stand";
-    public static final String MAIN_MESH_NAME = "male";
+    public static final String MAIN_MESH_NAME = "Body";
 
     /**
      * List of animations loaded from model file.
