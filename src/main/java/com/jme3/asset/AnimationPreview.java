@@ -57,9 +57,9 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
     public static void main(String[] args) throws Exception {
         AnimationPreview app = new AnimationPreview();
         final AppSettings appSettings = new AppSettings(true);
-        //appSettings.setFullscreen(true);
-        //appSettings.setResolution(1920, 1080);
-        //appSettings.setSamples(4);
+        appSettings.setFullscreen(true);
+        appSettings.setResolution(1920, 1080);
+        appSettings.setSamples(4);
         appSettings.setVSync(true);
         app.setSettings(appSettings);
         app.setShowSettings(false);
