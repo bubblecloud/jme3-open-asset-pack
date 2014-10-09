@@ -1,0 +1,1023 @@
+<scene export_time="1412512855.133367" exported_by="tlaukkan" formatVersion="1.0.1" previous_export_time="1412506249.339667" >
+  <nodes >
+    <node name="Character" >
+      <position x="0.000000" z="-0.000000" y="0.000000" />
+      <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+      <scale x="1.000000" z="1.000000" y="1.000000" />
+      <user_data value="16" type="int" name="MhxVersion" />
+      <user_data value="0.1" type="float" name="MhxScale" />
+      <user_data value="1.0.2" type="str" name="MhVersion" />
+      <user_data value="hm08" type="str" name="MhBaseMesh" />
+      <user_data value="Rigify" type="str" name="MhxRig" />
+      <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Default MhxRig:_Rigify MHXImporter:_1.16.12" type="str" name="MhxVersionStr" />
+      <user_data value="1" type="int" name="MhxShapekeyDrivers" />
+      <user_data value="0" type="int" name="MhxRigify" />
+      <user_data value="1" type="int" name="MhAlpha8" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <node name="male" >
+        <position x="0.000000" z="-0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale x="1.000000" z="1.000000" y="1.000000" />
+        <user_data value="-0.0" type="float" name="MhxOffsetX" />
+        <user_data value="-0.0" type="float" name="MhxOffsetY" />
+        <user_data value="-0.0" type="float" name="MhxOffsetZ" />
+        <user_data value="1" type="int" name="MhxMesh" />
+        <user_data value="1" type="int" name="MhHuman" />
+        <user_data value="0.1" type="float" name="MhxScale" />
+        <user_data value="caucasian:0.3333_asian:0.3333_african:0.3333_gender:1.0000_age:0.5000_weight:0.5000_muscle:0.5000_height:0.5000_bodyProportions:0.5000_" type="str" name="MhxModel" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Default MhxRig:_Rigify MHXImporter:_1.16.12" type="str" name="MhxVersionStr" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_trans_x="False" anisotropic_friction="False" lock_trans_y="False" lock_rot_z="False" lock_trans_z="False" mass="1.0" lock_rot_x="False" actor="False" mass_radius="1.0" friction_z="1.0" friction_x="1.0" velocity_max="0.0" meshFile="male.mesh" velocity_min="0.0" inertia_tensor="0.4000000059604645" lock_rot_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" friction_y="1.0" name="male" ghost="False" physics_type="STATIC" />
+      </node>
+      <node name="Widgets" >
+        <position x="0.000000" z="-0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale x="1.000000" z="1.000000" y="1.000000" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <node name="WGT-chest" >
+          <position x="0.000000" z="-0.028547" y="0.322490" />
+          <rotation qz="-0.000000" qy="-0.000000" qx="0.649073" qw="0.760726" />
+          <scale x="0.137243" z="0.137243" y="0.137243" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-elbow_hose.L" >
+          <position x="0.352207" z="0.015639" y="0.370910" />
+          <rotation qz="0.351050" qy="-0.041757" qx="-0.231040" qw="0.906444" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-elbow_hose.R" >
+          <position x="-0.352207" z="0.015639" y="0.370910" />
+          <rotation qz="-0.351050" qy="0.041757" qx="-0.231040" qw="0.906444" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-elbow_target.ik.L" >
+          <position x="0.449096" z="-0.420213" y="0.202577" />
+          <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+          <scale x="0.059646" z="0.059646" y="0.059646" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-elbow_target.ik.R" >
+          <position x="-0.449096" z="-0.420213" y="0.202577" />
+          <rotation qz="0.000000" qy="-0.000000" qx="0.000000" qw="1.000000" />
+          <scale x="0.059646" z="0.059646" y="0.059646" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.01.L" >
+          <position x="0.512345" z="0.311408" y="0.198520" />
+          <rotation qz="0.166061" qy="0.327344" qx="-0.899337" qw="0.237618" />
+          <scale x="0.029080" z="0.029080" y="0.029080" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.01.R" >
+          <position x="-0.512345" z="0.311408" y="0.198520" />
+          <rotation qz="-0.166061" qy="-0.327344" qx="-0.899337" qw="0.237618" />
+          <scale x="0.029080" z="0.029080" y="0.029080" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.02.L" >
+          <position x="0.516507" z="0.335600" y="0.182930" />
+          <rotation qz="0.132932" qy="0.338465" qx="-0.872033" qw="0.327610" />
+          <scale x="0.026105" z="0.026105" y="0.026105" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.02.R" >
+          <position x="-0.516507" z="0.335600" y="0.182930" />
+          <rotation qz="-0.132932" qy="-0.338465" qx="-0.872033" qw="0.327610" />
+          <scale x="0.026105" z="0.026105" y="0.026105" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.03.L" >
+          <position x="0.516770" z="0.355179" y="0.165665" />
+          <rotation qz="0.126494" qy="0.348280" qx="-0.864608" qw="0.339344" />
+          <scale x="0.026759" z="0.026759" y="0.026759" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.03.R" >
+          <position x="-0.516770" z="0.355179" y="0.165665" />
+          <rotation qz="-0.126494" qy="-0.348280" qx="-0.864608" qw="0.339344" />
+          <scale x="0.026759" z="0.026759" y="0.026759" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.L" >
+          <position x="0.512345" z="0.311408" y="0.198520" />
+          <rotation qz="0.166062" qy="0.327344" qx="-0.899337" qw="0.237618" />
+          <scale x="0.122916" z="0.122916" y="0.122916" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_index.R" >
+          <position x="-0.512345" z="0.311408" y="0.198520" />
+          <rotation qz="-0.166062" qy="-0.327344" qx="-0.899337" qw="0.237618" />
+          <scale x="0.122916" z="0.122916" y="0.122916" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.01.L" >
+          <position x="0.525363" z="0.292339" y="0.181919" />
+          <rotation qz="0.347570" qy="0.485414" qx="-0.772458" qw="0.216510" />
+          <scale x="0.036784" z="0.036784" y="0.036784" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.01.R" >
+          <position x="-0.525363" z="0.292339" y="0.181919" />
+          <rotation qz="-0.347570" qy="-0.485414" qx="-0.772458" qw="0.216510" />
+          <scale x="0.036784" z="0.036784" y="0.036784" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.02.L" >
+          <position x="0.537383" z="0.316787" y="0.157203" />
+          <rotation qz="0.293489" qy="0.521254" qx="-0.747622" qw="0.288478" />
+          <scale x="0.028835" z="0.028835" y="0.028835" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.02.R" >
+          <position x="-0.537383" z="0.316787" y="0.157203" />
+          <rotation qz="-0.293489" qy="-0.521254" qx="-0.747622" qw="0.288478" />
+          <scale x="0.028835" z="0.028835" y="0.028835" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.03.L" >
+          <position x="0.541365" z="0.335855" y="0.135943" />
+          <rotation qz="0.303156" qy="0.513207" qx="-0.747181" qw="0.294000" />
+          <scale x="0.028474" z="0.028474" y="0.028474" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.03.R" >
+          <position x="-0.541365" z="0.335855" y="0.135943" />
+          <rotation qz="-0.303156" qy="-0.513207" qx="-0.747181" qw="0.294000" />
+          <scale x="0.028474" z="0.028474" y="0.028474" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.L" >
+          <position x="0.525363" z="0.292339" y="0.181919" />
+          <rotation qz="0.347570" qy="0.485415" qx="-0.772458" qw="0.216511" />
+          <scale x="0.141139" z="0.141139" y="0.141139" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_middle.R" >
+          <position x="-0.525363" z="0.292339" y="0.181919" />
+          <rotation qz="-0.347570" qy="-0.485415" qx="-0.772458" qw="0.216511" />
+          <scale x="0.141139" z="0.141139" y="0.141139" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.01.L" >
+          <position x="0.541207" z="0.251373" y="0.167760" />
+          <rotation qz="0.373405" qy="0.384015" qx="-0.760478" qw="0.367116" />
+          <scale x="0.024817" z="0.024817" y="0.024817" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.01.R" >
+          <position x="-0.541207" z="0.251373" y="0.167760" />
+          <rotation qz="-0.373405" qy="-0.384015" qx="-0.760478" qw="0.367116" />
+          <scale x="0.024817" z="0.024817" y="0.024817" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.02.L" >
+          <position x="0.548304" z="0.262580" y="0.146786" />
+          <rotation qz="0.343116" qy="0.414175" qx="-0.734733" qw="0.413399" />
+          <scale x="0.016407" z="0.016407" y="0.016407" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.02.R" >
+          <position x="-0.548304" z="0.262580" y="0.146786" />
+          <rotation qz="-0.343116" qy="-0.414175" qx="-0.734733" qw="0.413399" />
+          <scale x="0.016407" z="0.016407" y="0.016407" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.03.L" >
+          <position x="0.550958" z="0.269516" y="0.132156" />
+          <rotation qz="0.343645" qy="0.408480" qx="-0.727579" qw="0.430908" />
+          <scale x="0.021078" z="0.021078" y="0.021078" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.03.R" >
+          <position x="-0.550958" z="0.269516" y="0.132156" />
+          <rotation qz="-0.343645" qy="-0.408480" qx="-0.727579" qw="0.430907" />
+          <scale x="0.021078" z="0.021078" y="0.021078" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.L" >
+          <position x="0.541207" z="0.251373" y="0.167760" />
+          <rotation qz="0.373405" qy="0.384015" qx="-0.760478" qw="0.367116" />
+          <scale x="0.093452" z="0.093452" y="0.093452" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_pinky.R" >
+          <position x="-0.541207" z="0.251373" y="0.167760" />
+          <rotation qz="-0.373404" qy="-0.384015" qx="-0.760479" qw="0.367116" />
+          <scale x="0.093452" z="0.093452" y="0.093452" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.01.L" >
+          <position x="0.535545" z="0.272805" y="0.174811" />
+          <rotation qz="0.416634" qy="0.453714" qx="-0.750554" qw="0.239225" />
+          <scale x="0.032466" z="0.032466" y="0.032466" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.01.R" >
+          <position x="-0.535545" z="0.272805" y="0.174811" />
+          <rotation qz="-0.416634" qy="-0.453714" qx="-0.750554" qw="0.239225" />
+          <scale x="0.032466" z="0.032466" y="0.032466" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.02.L" >
+          <position x="0.548802" z="0.290284" y="0.150878" />
+          <rotation qz="0.356265" qy="0.502481" qx="-0.723414" qw="0.311868" />
+          <scale x="0.027346" z="0.027346" y="0.027346" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.02.R" >
+          <position x="-0.548802" z="0.290284" y="0.150878" />
+          <rotation qz="-0.356265" qy="-0.502481" qx="-0.723414" qw="0.311868" />
+          <scale x="0.027346" z="0.027346" y="0.027346" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.03.L" >
+          <position x="0.554327" z="0.305369" y="0.128748" />
+          <rotation qz="0.377428" qy="0.487530" qx="-0.719181" qw="0.320376" />
+          <scale x="0.028240" z="0.028240" y="0.028240" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.03.R" >
+          <position x="-0.554327" z="0.305369" y="0.128748" />
+          <rotation qz="-0.377428" qy="-0.487530" qx="-0.719181" qw="0.320376" />
+          <scale x="0.028240" z="0.028240" y="0.028240" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.L" >
+          <position x="0.535545" z="0.272805" y="0.174811" />
+          <rotation qz="0.416634" qy="0.453714" qx="-0.750554" qw="0.239225" />
+          <scale x="0.132078" z="0.132078" y="0.132078" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-f_ring.R" >
+          <position x="-0.535545" z="0.272805" y="0.174811" />
+          <rotation qz="-0.416634" qy="-0.453714" qx="-0.750554" qw="0.239225" />
+          <scale x="0.132078" z="0.132078" y="0.132078" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-foot.fk.L" >
+          <position x="0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="0.003959" qy="0.040095" qx="0.999188" qw="0.000159" />
+          <scale x="0.140589" z="0.140589" y="0.140589" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-foot.fk.R" >
+          <position x="-0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="-0.003959" qy="-0.040095" qx="0.999188" qw="0.000159" />
+          <scale x="0.140589" z="0.140589" y="0.140589" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-foot.ik.L" >
+          <position x="0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="0.003971" qy="0.039893" qx="0.999196" qw="0.000159" />
+          <scale x="0.140733" z="0.140733" y="0.140733" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-foot.ik.R" >
+          <position x="-0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="-0.003971" qy="-0.039893" qx="0.999196" qw="0.000159" />
+          <scale x="0.140733" z="0.140733" y="0.140733" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-foot_roll.ik.L" >
+          <position x="0.201174" z="-0.045183" y="-0.810384" />
+          <rotation qz="0.029099" qy="0.001707" qx="0.000051" qw="0.999575" />
+          <scale x="0.093079" z="0.093079" y="0.093079" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-foot_roll.ik.R" >
+          <position x="-0.201174" z="-0.045183" y="-0.810384" />
+          <rotation qz="-0.029099" qy="-0.001707" qx="0.000051" qw="0.999575" />
+          <scale x="0.093079" z="0.093079" y="0.093079" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-forearm.fk.L" >
+          <position x="0.352207" z="0.015639" y="0.370910" />
+          <rotation qz="-0.335555" qy="-0.873168" qx="0.310574" qw="0.168892" />
+          <scale x="0.267477" z="0.267477" y="0.267477" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-forearm.fk.R" >
+          <position x="-0.352207" z="0.015639" y="0.370910" />
+          <rotation qz="0.335555" qy="0.873168" qx="0.310574" qw="0.168892" />
+          <scale x="0.267477" z="0.267477" y="0.267477" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-forearm_hose.L" >
+          <position x="0.419527" z="0.111630" y="0.306571" />
+          <rotation qz="0.339033" qy="-0.100184" qx="-0.380150" qw="0.854696" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-forearm_hose.R" >
+          <position x="-0.419527" z="0.111630" y="0.306571" />
+          <rotation qz="-0.339033" qy="0.100184" qx="-0.380150" qw="0.854696" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-forearm_hose_end.L" >
+          <position x="0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="0.339033" qy="-0.100184" qx="-0.380150" qw="0.854696" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-forearm_hose_end.R" >
+          <position x="-0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="-0.339033" qy="0.100184" qx="-0.380150" qw="0.854696" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-hand.fk.L" >
+          <position x="0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="0.274271" qy="0.474862" qx="-0.812179" qw="0.199115" />
+          <scale x="0.121213" z="0.121213" y="0.121213" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-hand.fk.R" >
+          <position x="-0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="-0.274271" qy="-0.474862" qx="-0.812179" qw="0.199115" />
+          <scale x="0.121213" z="0.121213" y="0.121213" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-hand.ik.L" >
+          <position x="0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="0.274271" qy="0.474863" qx="-0.812179" qw="0.199115" />
+          <scale x="0.121213" z="0.121213" y="0.121213" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-hand.ik.R" >
+          <position x="-0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="-0.274271" qy="-0.474863" qx="-0.812179" qw="0.199115" />
+          <scale x="0.121213" z="0.121213" y="0.121213" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-head" >
+          <position x="0.000000" z="0.003150" y="0.774678" />
+          <rotation qz="-0.000000" qy="-0.000000" qx="0.713633" qw="0.700519" />
+          <scale x="0.131838" z="0.131838" y="0.131838" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-hips" >
+          <position x="0.000000" z="0.003050" y="0.105335" />
+          <rotation qz="0.000000" qy="0.000000" qx="0.654111" qw="0.756399" />
+          <scale x="0.158918" z="0.158918" y="0.158918" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-knee_hose.L" >
+          <position x="0.151311" z="0.026883" y="-0.313595" />
+          <rotation qz="0.041441" qy="0.997601" qx="-0.053519" qw="0.014536" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-knee_hose.R" >
+          <position x="-0.151311" z="0.026883" y="-0.313595" />
+          <rotation qz="-0.041441" qy="-0.997601" qx="-0.053519" qw="0.014536" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-knee_target.ik.L" >
+          <position x="0.120560" z="0.878602" y="-0.293879" />
+          <rotation qz="0.000000" qy="-0.000000" qx="0.000000" qw="1.000000" />
+          <scale x="0.106563" z="0.106563" y="0.106563" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-knee_target.ik.R" >
+          <position x="-0.120560" z="0.878602" y="-0.293879" />
+          <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+          <scale x="0.106563" z="0.106563" y="0.106563" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-neck" >
+          <position x="0.000000" z="0.011547" y="0.665375" />
+          <rotation qz="-0.000000" qy="-0.000000" qx="0.679487" qw="0.733688" />
+          <scale x="0.109625" z="0.109625" y="0.109625" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-palm.L" >
+          <position x="0.509645" z="0.224280" y="0.206627" />
+          <rotation qz="0.444864" qy="0.311619" qx="-0.800532" qw="0.253256" />
+          <scale x="0.056928" z="0.056928" y="0.056928" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-palm.R" >
+          <position x="-0.510025" z="0.222502" y="0.204328" />
+          <rotation qz="-0.433506" qy="-0.315063" qx="-0.811309" qw="0.233636" />
+          <scale x="0.056063" z="0.056063" y="0.056063" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-root" >
+          <position x="0.000000" z="-0.000000" y="0.000000" />
+          <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+          <scale x="1.000000" z="1.000000" y="1.000000" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shin.fk.L" >
+          <position x="0.151311" z="0.026883" y="-0.313595" />
+          <rotation qz="0.026245" qy="-0.048856" qx="-0.695869" qw="0.716024" />
+          <scale x="0.436202" z="0.436202" y="0.436202" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shin.fk.R" >
+          <position x="-0.151311" z="0.026883" y="-0.313595" />
+          <rotation qz="-0.026245" qy="0.048856" qx="-0.695869" qw="0.716024" />
+          <scale x="0.436202" z="0.436202" y="0.436202" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shin_hose.L" >
+          <position x="0.174536" z="0.021047" y="-0.530377" />
+          <rotation qz="0.014252" qy="0.998358" qx="-0.053123" qw="0.015985" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shin_hose.R" >
+          <position x="-0.174536" z="0.021047" y="-0.530377" />
+          <rotation qz="-0.014252" qy="-0.998358" qx="-0.053123" qw="0.015985" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shin_hose_end.L" >
+          <position x="0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="0.014251" qy="0.998357" qx="-0.053155" qw="0.015989" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shin_hose_end.R" >
+          <position x="-0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="-0.014251" qy="-0.998357" qx="-0.053155" qw="0.015989" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shoulder.L" >
+          <position x="0.022776" z="0.051750" y="0.590898" />
+          <rotation qz="0.000000" qy="-0.622142" qx="-0.114547" qw="0.774479" />
+          <scale x="0.169888" z="0.169888" y="0.169888" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-shoulder.R" >
+          <position x="-0.022776" z="0.051750" y="0.590898" />
+          <rotation qz="-0.000000" qy="0.622142" qx="-0.114547" qw="0.774479" />
+          <scale x="0.169888" z="0.169888" y="0.169888" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-spine" >
+          <position x="0.000000" z="-0.019878" y="0.262590" />
+          <rotation qz="-0.000000" qy="-0.000000" qx="0.654514" qw="0.756050" />
+          <scale x="0.030262" z="0.030262" y="0.030262" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-spine-1" >
+          <position x="0.000000" z="-0.024213" y="0.292540" />
+          <rotation qz="-0.000000" qy="-0.000000" qx="0.654514" qw="0.756050" />
+          <scale x="0.030262" z="0.030262" y="0.030262" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thigh.fk.L" >
+          <position x="0.108498" z="-0.007630" y="0.100348" />
+          <rotation qz="0.023530" qy="-0.050220" qx="-0.734032" qw="0.676846" />
+          <scale x="0.417580" z="0.417580" y="0.417580" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thigh.fk.R" >
+          <position x="-0.108498" z="-0.007630" y="0.100348" />
+          <rotation qz="-0.023530" qy="0.050220" qx="-0.734032" qw="0.676846" />
+          <scale x="0.417580" z="0.417580" y="0.417580" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thigh_hose.L" >
+          <position x="0.129904" z="0.009627" y="-0.106624" />
+          <rotation qz="-0.040437" qy="0.997642" qx="-0.052146" qw="0.018873" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thigh_hose.R" >
+          <position x="-0.129904" z="0.009627" y="-0.106624" />
+          <rotation qz="0.040437" qy="-0.997642" qx="-0.052146" qw="0.018875" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thigh_hose_end.L" >
+          <position x="0.108498" z="-0.007630" y="0.100348" />
+          <rotation qz="-0.040438" qy="0.997642" qx="-0.052147" qw="0.018882" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thigh_hose_end.R" >
+          <position x="-0.108498" z="-0.007630" y="0.100348" />
+          <rotation qz="0.040438" qy="-0.997642" qx="-0.052147" qw="0.018881" />
+          <scale x="0.106723" z="0.106723" y="0.106723" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.01.L" >
+          <position x="0.487995" z="0.256335" y="0.235577" />
+          <rotation qz="-0.341856" qy="0.029396" qx="-0.920597" qw="0.186473" />
+          <scale x="0.034186" z="0.034186" y="0.034186" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.01.R" >
+          <position x="-0.487995" z="0.256335" y="0.235577" />
+          <rotation qz="0.341863" qy="-0.029359" qx="-0.920598" qw="0.186459" />
+          <scale x="0.034186" z="0.034186" y="0.034186" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.02.L" >
+          <position x="0.466103" z="0.280153" y="0.224527" />
+          <rotation qz="-0.189437" qy="-0.144147" qx="-0.953621" qw="0.184234" />
+          <scale x="0.041420" z="0.041419" y="0.041419" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.02.R" >
+          <position x="-0.466103" z="0.280153" y="0.224527" />
+          <rotation qz="0.189438" qy="0.144157" qx="-0.953620" qw="0.184232" />
+          <scale x="0.041420" z="0.041420" y="0.041420" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.03.L" >
+          <position x="0.453338" z="0.315788" y="0.207711" />
+          <rotation qz="-0.185615" qy="-0.140756" qx="-0.947015" qw="0.221127" />
+          <scale x="0.026853" z="0.026853" y="0.026853" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.03.R" >
+          <position x="-0.453338" z="0.315788" y="0.207711" />
+          <rotation qz="0.185617" qy="0.140766" qx="-0.947014" qw="0.221125" />
+          <scale x="0.026853" z="0.026853" y="0.026853" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.L" >
+          <position x="0.487995" z="0.256335" y="0.235577" />
+          <rotation qz="-0.341855" qy="0.029396" qx="-0.920597" qw="0.186473" />
+          <scale x="0.153688" z="0.153688" y="0.153688" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-thumb.R" >
+          <position x="-0.487995" z="0.256335" y="0.235577" />
+          <rotation qz="0.341863" qy="-0.029359" qx="-0.920598" qw="0.186460" />
+          <scale x="0.153688" z="0.153688" y="0.153688" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-toe.L" >
+          <position x="0.201629" z="0.140716" y="-0.810384" />
+          <rotation qz="0.004119" qy="0.040015" qx="0.999191" qw="0.000161" />
+          <scale x="0.082108" z="0.082108" y="0.082108" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-toe.R" >
+          <position x="-0.201934" z="0.140716" y="-0.810384" />
+          <rotation qz="-0.004120" qy="-0.040015" qx="0.999191" qw="0.000161" />
+          <scale x="0.082108" z="0.082108" y="0.082108" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-torso" >
+          <position x="0.000000" z="-0.019878" y="0.262590" />
+          <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+          <scale x="0.178342" z="0.178342" y="0.178342" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-upper_arm.fk.L" >
+          <position x="0.186492" z="0.017834" y="0.560755" />
+          <rotation qz="-0.653528" qy="-0.669269" qx="0.218456" qw="0.277951" />
+          <scale x="0.252007" z="0.252007" y="0.252007" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-upper_arm.fk.R" >
+          <position x="-0.186492" z="0.017834" y="0.560755" />
+          <rotation qz="0.653528" qy="0.669269" qx="0.218456" qw="0.277951" />
+          <scale x="0.252007" z="0.252007" y="0.252007" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-upper_arm_hose.L" >
+          <position x="0.269350" z="0.016736" y="0.465833" />
+          <rotation qz="0.351012" qy="0.042069" qx="-0.011131" qw="0.935359" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-upper_arm_hose.R" >
+          <position x="-0.269350" z="0.016736" y="0.465833" />
+          <rotation qz="-0.351012" qy="-0.042069" qx="-0.011131" qw="0.935359" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-upper_arm_hose_end.L" >
+          <position x="0.186492" z="0.017834" y="0.560755" />
+          <rotation qz="0.351012" qy="0.042069" qx="-0.011130" qw="0.935359" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-upper_arm_hose_end.R" >
+          <position x="-0.186492" z="0.017834" y="0.560755" />
+          <rotation qz="-0.351012" qy="-0.042069" qx="-0.011130" qw="0.935359" />
+          <scale x="0.064935" z="0.064935" y="0.064935" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-foot.ik.L" >
+          <position x="0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="0.016571" qy="-0.016571" qx="0.706913" qw="0.706913" />
+          <scale x="0.026641" z="0.026641" y="0.026641" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-foot.ik.R" >
+          <position x="-0.197762" z="0.015211" y="-0.747160" />
+          <rotation qz="-0.016571" qy="0.016571" qx="0.706913" qw="0.706913" />
+          <scale x="0.026641" z="0.026641" y="0.026641" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-hand.ik.L" >
+          <position x="0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="0.572214" qy="-0.572214" qx="0.415417" qw="0.415417" />
+          <scale x="0.014912" z="0.014912" y="0.014912" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-hand.ik.R" >
+          <position x="-0.486847" z="0.207622" y="0.242231" />
+          <rotation qz="-0.572214" qy="0.572214" qx="0.415417" qw="0.415417" />
+          <scale x="0.014912" z="0.014912" y="0.014912" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-thigh_pole.ik.L" >
+          <position x="0.151311" z="0.026883" y="-0.313595" />
+          <rotation qz="0.025900" qy="-0.025900" qx="0.706632" qw="0.706632" />
+          <scale x="0.026641" z="0.026641" y="0.026641" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-thigh_pole.ik.R" >
+          <position x="-0.151311" z="0.026883" y="-0.313595" />
+          <rotation qz="-0.025900" qy="0.025900" qx="0.706632" qw="0.706632" />
+          <scale x="0.026641" z="0.026641" y="0.026641" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-upper_arm_pole.ik.L" >
+          <position x="0.352207" z="0.015639" y="0.370910" />
+          <rotation qz="-0.631614" qy="0.631614" qx="0.317905" qw="0.317905" />
+          <scale x="0.014912" z="0.014912" y="0.014912" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+        <node name="WGT-VIS-upper_arm_pole.ik.R" >
+          <position x="-0.352207" z="0.015639" y="0.370910" />
+          <rotation qz="0.631614" qy="-0.631614" qx="0.317905" qw="0.317905" />
+          <scale x="0.014912" z="0.014912" y="0.014912" />
+          <game >
+            <sensors />
+            <actuators />
+          </game>
+        </node>
+      </node>
+    </node>
+    <node name="Lamp" >
+      <position x="4.076245" z="-1.005454" y="5.903862" />
+      <rotation qz="-0.272171" qy="0.755880" qx="0.169076" qw="0.570947" />
+      <scale x="1.000000" z="1.000000" y="1.000000" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <light shadow="true" powerScale="1.0" type="point" name="Lamp" >
+        <position x="4.076245" z="-1.005454" y="5.903862" />
+        <lightAttenuation range="5000" quadratic="0.0" linear="0.03333335240683057" constant="1.0" />
+        <colourDiffuse r="1.0" g="1.0" b="1.0" />
+        <colourSpecular r="1.0" g="1.0" b="1.0" />
+        <colourShadow r="1.0" g="1.0" b="1.0" />
+      </light>
+    </node>
+    <node name="Camera" >
+      <position x="7.481132" z="6.507640" y="5.343665" />
+      <rotation qz="-0.212922" qy="0.334251" qx="0.481707" qw="0.781600" />
+      <scale x="1.000000" z="1.000000" y="1.000000" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <camera projectionType="perspective" fov="0.5033799435163735" name="Camera" >
+        <clipping farPlaneDist="100.0" far="100.0" near="0.10000000149011612" nearPlaneDist="0.10000000149011612" />
+      </camera>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="C:\Users\tlaukkan\Development\projects\jme3-open-asset-pack\src\main\resources\character\human\male\basic_rigify\ogre\male.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourDiffuse r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
+    <colourBackground r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
+    <colourAmbient r="0.0" g="0.0" b="0.0" />
+  </environment>
+</scene>
