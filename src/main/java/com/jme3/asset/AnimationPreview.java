@@ -28,7 +28,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
     /**
      * Repeat count for animations.
      */
-    public static final int ANIMATION_REPEAT_COUNT = 3;
+    public static final int ANIMATION_REPEAT_COUNT = 10;
     /**
      * Special pose used for begin and end.
      */
