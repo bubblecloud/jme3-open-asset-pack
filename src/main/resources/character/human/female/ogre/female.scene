@@ -1,174 +1,174 @@
-<scene previous_export_time="1412968833.038863" exported_by="tlaukkan" formatVersion="1.0.1" export_time="1413125867.664394" >
+<scene exported_by="tlaukkan" formatVersion="1.0.1" previous_export_time="1412968833.038863" export_time="1413487724.816489" >
   <nodes >
     <node name="female" >
-      <position x="0.000000" y="0.000000" z="-0.000000" />
-      <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-      <scale x="1.000000" y="1.000000" z="1.000000" />
-      <user_data name="MhxVersion" value="16" type="int" />
-      <user_data name="MhxScale" value="0.1" type="float" />
-      <user_data name="MhVersion" value="1.0.2" type="str" />
-      <user_data name="MhBaseMesh" value="hm08" type="str" />
-      <user_data name="MhxRig" value="Basic" type="str" />
-      <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
-      <user_data name="MhxShapekeyDrivers" value="1" type="int" />
-      <user_data name="MhAlpha8" value="1" type="int" />
+      <position z="-0.000000" y="0.000000" x="0.000000" />
+      <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+      <scale z="1.000000" y="1.000000" x="1.000000" />
+      <user_data value="16" name="MhxVersion" type="int" />
+      <user_data value="0.1" name="MhxScale" type="float" />
+      <user_data value="1.0.2" name="MhVersion" type="str" />
+      <user_data value="hm08" name="MhBaseMesh" type="str" />
+      <user_data value="Basic" name="MhxRig" type="str" />
+      <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
+      <user_data value="1" name="MhxShapekeyDrivers" type="int" />
+      <user_data value="1" name="MhAlpha8" type="int" />
       <game >
         <sensors />
         <actuators />
       </game>
       <node name="Body" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxOffsetX" value="-0.0" type="float" />
-        <user_data name="MhxOffsetY" value="-0.8169" type="float" />
-        <user_data name="MhxOffsetZ" value="-0.0" type="float" />
-        <user_data name="MhxMesh" value="1" type="int" />
-        <user_data name="MhHuman" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxModel" value="caucasian:0.5240_asian:0.4760_african:0.0000_gender:0.0000_age:0.5970_weight:0.4440_muscle:0.7100_height:0.5000_bodyProportions:0.4520_" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="-0.0" name="MhxOffsetX" type="float" />
+        <user_data value="-0.8169" name="MhxOffsetY" type="float" />
+        <user_data value="-0.0" name="MhxOffsetZ" type="float" />
+        <user_data value="1" name="MhxMesh" type="int" />
+        <user_data value="1" name="MhHuman" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="caucasian:0.5240_asian:0.4760_african:0.0000_gender:0.0000_age:0.5970_weight:0.4440_muscle:0.7100_height:0.5000_bodyProportions:0.4520_" name="MhxModel" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="Body" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="Body.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="Body.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="Body" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="Eyebrow008" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="Eyebrow008" type="str" />
-        <user_data name="MhxProxyUuid" value="19e43555-4613-4457-ac6e-c30bf350d275" type="str" />
-        <user_data name="MhxProxyFile" value="C:/modeling/makehuman/data/eyebrows/eyebrow011/eyebrow011.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Eyebrows" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="Eyebrow008" name="MhxProxyName" type="str" />
+        <user_data value="19e43555-4613-4457-ac6e-c30bf350d275" name="MhxProxyUuid" type="str" />
+        <user_data value="C:/modeling/makehuman/data/eyebrows/eyebrow011/eyebrow011.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Eyebrows" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="Eyebrow008" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="Eyebrow008.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="Eyebrow008.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="Eyebrow008" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="Eyelashes01" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="Eyelashes01" type="str" />
-        <user_data name="MhxProxyUuid" value="d533836f-13ad-4836-8b65-051108253cd2" type="str" />
-        <user_data name="MhxProxyFile" value="C:/modeling/makehuman/data/eyelashes/eyelashes01/eyelashes01.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Eyelashes" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="Eyelashes01" name="MhxProxyName" type="str" />
+        <user_data value="d533836f-13ad-4836-8b65-051108253cd2" name="MhxProxyUuid" type="str" />
+        <user_data value="C:/modeling/makehuman/data/eyelashes/eyelashes01/eyelashes01.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Eyelashes" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="Eyelashes01" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="Eyelashes01.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="Eyelashes01.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="Eyelashes01" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="fhair01" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="fhair01" type="str" />
-        <user_data name="MhxProxyUuid" value="c4808d0d-bbbc-4e62-82a1-8610b06d0e05" type="str" />
-        <user_data name="MhxProxyFile" value="C:/modeling/makehuman/data/hair/fhair01/fhair01.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Hair" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="fhair01" name="MhxProxyName" type="str" />
+        <user_data value="c4808d0d-bbbc-4e62-82a1-8610b06d0e05" name="MhxProxyUuid" type="str" />
+        <user_data value="C:/modeling/makehuman/data/hair/fhair01/fhair01.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Hair" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="fhair01" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="fhair01.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="fhair01.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="fhair01" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="jeans01" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="jeans01" type="str" />
-        <user_data name="MhxProxyUuid" value="faa58a00-05db-4a53-a3a6-72af1cec2053" type="str" />
-        <user_data name="MhxProxyFile" value="data/clothes/jeans01/jeans01.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Clothes" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="jeans01" name="MhxProxyName" type="str" />
+        <user_data value="faa58a00-05db-4a53-a3a6-72af1cec2053" name="MhxProxyUuid" type="str" />
+        <user_data value="data/clothes/jeans01/jeans01.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Clothes" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="jeans01" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="jeans01.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="jeans01.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="jeans01" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="LowPoly" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="Low-Poly" type="str" />
-        <user_data name="MhxProxyUuid" value="1cc97a30-85a1-42e6-a9f7-b3e753732baa" type="str" />
-        <user_data name="MhxProxyFile" value="C:/modeling/makehuman/data/eyes/low-poly/low-poly.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Eyes" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="Low-Poly" name="MhxProxyName" type="str" />
+        <user_data value="1cc97a30-85a1-42e6-a9f7-b3e753732baa" name="MhxProxyUuid" type="str" />
+        <user_data value="C:/modeling/makehuman/data/eyes/low-poly/low-poly.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Eyes" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="LowPoly" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="LowPoly.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="LowPoly.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="LowPoly" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="Teeth_Base" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="Teeth_Base" type="str" />
-        <user_data name="MhxProxyUuid" value="8ed08ea6-e3ad-4d36-b8e7-c4e3836e66b7" type="str" />
-        <user_data name="MhxProxyFile" value="C:/modeling/makehuman/data/teeth/teeth_base/teeth_base.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Teeth" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="Teeth_Base" name="MhxProxyName" type="str" />
+        <user_data value="8ed08ea6-e3ad-4d36-b8e7-c4e3836e66b7" name="MhxProxyUuid" type="str" />
+        <user_data value="C:/modeling/makehuman/data/teeth/teeth_base/teeth_base.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Teeth" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="Teeth_Base" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="Teeth_Base.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="Teeth_Base.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="Teeth_Base" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="tongue01" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="tongue01" type="str" />
-        <user_data name="MhxProxyUuid" value="52ad91a3-caad-4e50-8c38-67634e5e789c" type="str" />
-        <user_data name="MhxProxyFile" value="C:/modeling/makehuman/data/tongue/tongue01/tongue01.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Tongue" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="tongue01" name="MhxProxyName" type="str" />
+        <user_data value="52ad91a3-caad-4e50-8c38-67634e5e789c" name="MhxProxyUuid" type="str" />
+        <user_data value="C:/modeling/makehuman/data/tongue/tongue01/tongue01.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Tongue" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="tongue01" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="tongue01.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="tongue01.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="tongue01" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
       <node name="tshirt02" >
-        <position x="0.000000" y="0.000000" z="-0.000000" />
-        <rotation qy="0.000000" qx="0.000000" qz="-0.000000" qw="1.000000" />
-        <scale x="1.000000" y="1.000000" z="1.000000" />
-        <user_data name="MhxProxy" value="1" type="int" />
-        <user_data name="MhxScale" value="0.1" type="float" />
-        <user_data name="MhxProxyName" value="tshirt02" type="str" />
-        <user_data name="MhxProxyUuid" value="1bba9db9-1859-424b-bbff-e3abd48f0fc5" type="str" />
-        <user_data name="MhxProxyFile" value="data/clothes/tshirt02/tshirt02.mhclo" type="str" />
-        <user_data name="MhxProxyType" value="Clothes" type="str" />
-        <user_data name="MhxVersionStr" value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" type="str" />
+        <position z="-0.000000" y="0.000000" x="0.000000" />
+        <rotation qz="-0.000000" qy="0.000000" qx="0.000000" qw="1.000000" />
+        <scale z="1.000000" y="1.000000" x="1.000000" />
+        <user_data value="1" name="MhxProxy" type="int" />
+        <user_data value="0.1" name="MhxScale" type="float" />
+        <user_data value="tshirt02" name="MhxProxyName" type="str" />
+        <user_data value="1bba9db9-1859-424b-bbff-e3abd48f0fc5" name="MhxProxyUuid" type="str" />
+        <user_data value="data/clothes/tshirt02/tshirt02.mhclo" name="MhxProxyFile" type="str" />
+        <user_data value="Clothes" name="MhxProxyType" type="str" />
+        <user_data value="1 16 MhVersion:_1.0.2 MhBaseMesh:_hm08 MhxRig:_Basic MHXImporter:_1.16.12" name="MhxVersionStr" type="str" />
         <game >
           <sensors />
           <actuators />
         </game>
-        <entity friction_y="1.0" actor="False" inertia_tensor="0.4000000059604645" physics_type="STATIC" ghost="False" velocity_max="0.0" name="tshirt02" lock_rot_y="False" damping_trans="0.03999999910593033" lock_trans_y="False" mass_radius="1.0" friction_x="1.0" meshFile="tshirt02.mesh" lock_trans_x="False" friction_z="1.0" lock_trans_z="False" velocity_min="0.0" anisotropic_friction="False" damping_rot="0.10000000149011612" lock_rot_x="False" mass="1.0" lock_rot_z="False" />
+        <entity ghost="False" mass_radius="1.0" meshFile="tshirt02.mesh" damping_trans="0.03999999910593033" friction_z="1.0" damping_rot="0.10000000149011612" lock_rot_z="False" lock_trans_x="False" lock_trans_z="False" inertia_tensor="0.4000000059604645" friction_x="1.0" lock_rot_y="False" mass="1.0" anisotropic_friction="False" lock_rot_x="False" name="tshirt02" lock_trans_y="False" friction_y="1.0" actor="False" physics_type="STATIC" velocity_max="0.0" velocity_min="0.0" />
       </node>
     </node>
   </nodes>
@@ -178,8 +178,8 @@
     </item>
   </externals>
   <environment >
-    <colourBackground r="0.05087608844041824" b="0.05087608844041824" g="0.05087608844041824" />
-    <colourAmbient r="0.0" b="0.0" g="0.0" />
-    <colourDiffuse r="0.05087608844041824" b="0.05087608844041824" g="0.05087608844041824" />
+    <colourAmbient g="0.0" r="0.0" b="0.0" />
+    <colourDiffuse g="0.05087608844041824" r="0.05087608844041824" b="0.05087608844041824" />
+    <colourBackground g="0.05087608844041824" r="0.05087608844041824" b="0.05087608844041824" />
   </environment>
 </scene>
