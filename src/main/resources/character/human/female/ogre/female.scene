@@ -1,4 +1,4 @@
-<scene exported_by="tlaukkan" formatVersion="1.0.1" previous_export_time="1412968833.038863" export_time="1413487724.816489" >
+<scene exported_by="tlaukkan" formatVersion="1.0.1" previous_export_time="1413489410.683149" export_time="1413489799.903176" >
   <nodes >
     <node name="female" >
       <position z="-0.000000" y="0.000000" x="0.000000" />
@@ -172,11 +172,7 @@
       </node>
     </node>
   </nodes>
-  <externals >
-    <item type="material" >
-      <file name="C:\Users\tlaukkan\Development\projects\jme3-open-asset-pack\src\main\resources\character\human\female\ogre\female.material" />
-    </item>
-  </externals>
+  <externals />
   <environment >
     <colourAmbient g="0.0" r="0.0" b="0.0" />
     <colourDiffuse g="0.05087608844041824" r="0.05087608844041824" b="0.05087608844041824" />

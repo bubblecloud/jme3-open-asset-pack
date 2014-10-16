@@ -3,6 +3,7 @@ package com.jme3.asset;
 import com.jme3.animation.AnimControl;
 import com.jme3.animation.LoopMode;
 import com.jme3.app.SimpleApplication;
+import com.jme3.app.state.VideoRecorderAppState;
 import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
 import com.jme3.math.ColorRGBA;
@@ -28,7 +29,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
     /**
      * Repeat count for animations.
      */
-    public static final int ANIMATION_REPEAT_COUNT = 10;
+    public static final int ANIMATION_REPEAT_COUNT = 5;
     /**
      * Special pose used for begin and end.
      */
@@ -43,10 +44,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
      * List of animations loaded from model file.
      */
     private ArrayList<String> animations;
-    /**
-     * Number of times current animation has played so far.
-     */
-    private int playCounter = 0;
+
     private CharacterAnimator animator;
 
     /**
@@ -59,7 +57,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
         final AppSettings appSettings = new AppSettings(true);
         appSettings.setFullscreen(true);
         appSettings.setResolution(1920, 1080);
-        appSettings.setSamples(4);
+        appSettings.setSamples(8);
         appSettings.setVSync(true);
         app.setSettings(appSettings);
         app.setShowSettings(false);
@@ -107,10 +105,10 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             animations.remove(STAND);
             animations.remove(REST);
             System.out.println(animations);
-            animator.animate(REST, 1f, 2f, LoopMode.DontLoop);
+            animator.animate(REST, 1f, 2f, 1);
         }
 
-        //stateManager.attach(new VideoRecorderAppState());
+        stateManager.attach(new VideoRecorderAppState());
 
         cam.setLocation(new Vector3f(0, 1.5f, 3f));
         cam.setRotation(
@@ -132,26 +130,18 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
         }
 
         if (REST.equals(animator.getAnimationName())) {
-            animator.animate(STAND, 1f, 1f, LoopMode.DontLoop);
+            animator.animate(STAND, 1f, 1f, 1);
             System.out.println("Playing beginning " + STAND);
-        } else if (!STAND.equals(animationName) && playCounter >= ANIMATION_REPEAT_COUNT) {
-            animator.animate(STAND, 2f, 0.5f, LoopMode.DontLoop);
+        } else if (!STAND.equals(animationName)) {
+            animator.animate(STAND, 2f, 0.5f, 1);
             System.out.println("Playing intermediate " + STAND);
         } else {
-            if (animations.size() > 0 || playCounter < ANIMATION_REPEAT_COUNT) {
-                final String nextAnimation;
-                if (playCounter > 0 && playCounter < ANIMATION_REPEAT_COUNT) {
-                    nextAnimation = animationName;
-                    animator.animate(nextAnimation, 1.5f, 0.5f, LoopMode.DontLoop);
-                } else {
-                    playCounter = 0;
-                    nextAnimation =  animations.remove(0);
-                    animator.animate(nextAnimation, 1.5f, 0.5f, LoopMode.DontLoop);
-                }
+            if (animations.size() > 0) {
+                final String nextAnimation =  animations.remove(0);
+                animator.animate(nextAnimation, 1f, 0.5f, ANIMATION_REPEAT_COUNT);
                 System.out.println("Playing: " + nextAnimation);
-                playCounter++;
             } else {
-                animator.animate(REST,  1f,  1f, LoopMode.DontLoop);
+                animator.animate(REST,  1f,  1f, 1);
                 System.out.println("Playing final " + REST);
             }
         }

@@ -39,9 +39,9 @@ public class CharacterAnimator {
     private float speedMultiplier = 0f;
 
     /**
-     * The animation loop mode.
+     * The loop count.
      */
-    private LoopMode loopMode = LoopMode.DontLoop;
+    private int loopCount = 0;
 
     /**
      * The animation max time.
@@ -96,15 +96,14 @@ public class CharacterAnimator {
      * @param animationName the animation
      * @param speedMultiplier the speed multiplier (1 = animation native speed, 2 = double speed...)
      * @param blendTime the blend time in seconds
-     * @param loopMode the animation loop mode
      */
     public void animate(final String animationName, final float speedMultiplier, final float blendTime,
-                        final LoopMode loopMode) {
+                        final int loopCount) {
+        this.loopCount = loopCount - 1;
         this.animationName = animationName;
         this.speedMultiplier = speedMultiplier;
         this.animationTime = 0;
         this.animationMaxTime = 0;
-        this.loopMode = loopMode;
         for (final String spatialName : animChannels.keySet()) {
             final AnimControl animControl = animControls.get(spatialName);
             final Animation animation = animControl.getAnim(animationName);
@@ -115,7 +114,7 @@ public class CharacterAnimator {
                 } else {
                     animChannel.setAnim(animationName);
                 }
-                animChannel.setLoopMode(loopMode);
+                animChannel.setLoopMode(LoopMode.Loop);
                 animChannel.setSpeed(speedMultiplier);
                 this. animationMaxTime = animChannel.getAnimMaxTime();
             }
@@ -153,9 +152,11 @@ public class CharacterAnimator {
      */
     public void update(final float tpf) {
         if (animationTime > 0f && animationTime > animationMaxTime) {
-            if (loopMode == LoopMode.DontLoop) {
+            if (loopCount <= 0) {
                 speedMultiplier = 0f;
                 characterAnimatorListener.onAnimCycleDone(animationName);
+            } else {
+                loopCount--;
             }
             animationTime = 0f;
         }
