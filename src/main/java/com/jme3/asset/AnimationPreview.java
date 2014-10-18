@@ -108,7 +108,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             animator.animate(REST, 1f, 2f, 1);
         }
 
-        stateManager.attach(new VideoRecorderAppState());
+        //stateManager.attach(new VideoRecorderAppState());
 
         cam.setLocation(new Vector3f(0, 1.5f, 2.3f));
         cam.setRotation(
