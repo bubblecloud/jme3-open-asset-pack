@@ -25,7 +25,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
     /**
      * The character model file.
      */
-    public static final String CHARACTER_MODEL_FILE = "character/human/female/ogre/female.scene";
+    public static final String CHARACTER_MODEL_FILE = "character/human/male/ogre/male.scene";
     /**
      * Repeat count for animations.
      */
@@ -38,7 +38,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
      * Special pose used between animations.
      */
     public static final String STAND = "Stand";
-    public static final String MAIN_MESH_NAME = "Body";
+    public static final String MAIN_MESH_NAME = "male";
 
     /**
      * List of animations loaded from model file.
@@ -108,9 +108,9 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             animator.animate(REST, 1f, 2f, 1);
         }
 
-        //stateManager.attach(new VideoRecorderAppState());
+        stateManager.attach(new VideoRecorderAppState());
 
-        cam.setLocation(new Vector3f(0, 1.5f, 2.3f));
+        cam.setLocation(new Vector3f(0, 2f, 3f));
         cam.setRotation(
                 new Quaternion().fromAngleAxis(-FastMath.PI * 0.10f, new Vector3f(1, 0, 0)).mult(
                         new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
@@ -133,7 +133,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             animator.animate(STAND, 0.5f, 2f, 1);
             System.out.println("Playing beginning " + STAND);
         } else if (!STAND.equals(animationName)) {
-            animator.animate(STAND, 2f, 0.5f, 1);
+            animator.animate(STAND, 1f, 0.5f, 1);
             System.out.println("Playing intermediate " + STAND);
         } else {
             if (animations.size() > 0) {
