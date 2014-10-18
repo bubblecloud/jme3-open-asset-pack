@@ -38,7 +38,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
      * Special pose used between animations.
      */
     public static final String STAND = "Stand";
-    public static final String MAIN_MESH_NAME = "male";
+    public static final String MAIN_MESH_NAME = "Body";
 
     /**
      * List of animations loaded from model file.
@@ -108,7 +108,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             animator.animate(REST, 1f, 2f, 1);
         }
 
-        stateManager.attach(new VideoRecorderAppState());
+        //stateManager.attach(new VideoRecorderAppState());
 
         cam.setLocation(new Vector3f(0, 2f, 3f));
         cam.setRotation(

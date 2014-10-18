@@ -5,17 +5,17 @@ hair mhair02 f81a4e9a-e3d7-4ecb-bdf0-16d7fd9070a4
 eyebrows Eyebrow008 19e43555-4613-4457-ac6e-c30bf350d275
 eyes Low-Poly 1cc97a30-85a1-42e6-a9f7-b3e753732baa
 clothes jeans01 faa58a00-05db-4a53-a3a6-72af1cec2053
-clothes Tshirt01 ea986be3-a9df-48e9-9f73-80a02ec1db61
+clothes tshirt02 1bba9db9-1859-424b-bbff-e3abd48f0fc5
 clothesHideFaces True
 gendered BreastFirmness 0.500000
 gendered BreastSize 0.500000
 macro Weight 0.500000
 macro Gender 1.000000
-macro Age 0.661000
+macro Age 0.540000
 macro Height 0.500000
-macro Asian 0.000000
-macro African 0.425517
-macro Caucasian 0.574483
+macro Asian 0.315000
+macro African 0.000000
+macro Caucasian 0.685000
 macro Muscle 0.500000
 macro BodyProportions 0.500000
 background enabled False

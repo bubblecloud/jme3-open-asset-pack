@@ -140,19 +140,19 @@ material male:mhair02:mhair02black
         }
     }
 }
-// male:Tshirt01:TShirtWhite genrated by blender2ogre 0.6.0
+// male:tshirt02:tshirt02Material genrated by blender2ogre 0.6.0
 
-material male:Tshirt01:TShirtWhite 
+material male:tshirt02:tshirt02Material 
 {
     receive_shadows on 
 
     technique
     {
-        pass male:Tshirt01:TShirtWhite
+        pass male:tshirt02:tshirt02Material
         {
             ambient 1.0 1.0 1.0 0.0
             diffuse 1.0 1.0 1.0 0.0
-            specular 0.07058999687433243 0.07058999687433243 0.07058999687433243 0.0 102.25
+            specular 0.031369999051094055 0.031369999051094055 0.031369999051094055 0.0 25.0
             emissive 0.0 0.0 0.0 0.0
 
             alpha_to_coverage off
@@ -174,21 +174,14 @@ material male:Tshirt01:TShirtWhite
 
             texture_unit 
             {
-                texture tshirt_texture_white.png
+                texture tshirt02_texture.png
                 tex_address_mode wrap
                 scale 1.0 1.0
                 colour_op alpha_blend
             }
             texture_unit 
             {
-                texture tshirt_normal.png
-                tex_address_mode wrap
-                scale 1.0 1.0
-                colour_op modulate
-            }
-            texture_unit 
-            {
-                texture tshirt_displacement.png
+                texture tshirt02_normals.png
                 tex_address_mode wrap
                 scale 1.0 1.0
                 colour_op modulate
