@@ -55,10 +55,10 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
     public static void main(String[] args) throws Exception {
         AnimationPreview app = new AnimationPreview();
         final AppSettings appSettings = new AppSettings(true);
-        appSettings.setFullscreen(true);
-        appSettings.setResolution(1920, 1080);
+        appSettings.setFullscreen(false);
+        appSettings.setResolution(640, 480);
         appSettings.setSamples(8);
-        appSettings.setVSync(true);
+        appSettings.setVSync(false);
         app.setSettings(appSettings);
         app.setShowSettings(false);
         app.start();
@@ -108,11 +108,11 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             animator.animate(REST, 1f, 2f, 1);
         }
 
-        //stateManager.attach(new VideoRecorderAppState());
+        stateManager.attach(new VideoRecorderAppState());
 
-        cam.setLocation(new Vector3f(0, 1.5f, 3f));
+        cam.setLocation(new Vector3f(0, 1.5f, 2.3f));
         cam.setRotation(
-                new Quaternion().fromAngleAxis(-FastMath.PI * 0.04f, new Vector3f(1, 0, 0)).mult(
+                new Quaternion().fromAngleAxis(-FastMath.PI * 0.10f, new Vector3f(1, 0, 0)).mult(
                         new Quaternion().fromAngleAxis(FastMath.PI, new Vector3f(0, 1, 0))));
 
     }
@@ -138,7 +138,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
         } else {
             if (animations.size() > 0) {
                 final String nextAnimation =  animations.remove(0);
-                animator.animate(nextAnimation, 1f, 0.5f, ANIMATION_REPEAT_COUNT);
+                animator.animate(nextAnimation, 1.5f, 0.5f, ANIMATION_REPEAT_COUNT);
                 System.out.println("Playing: " + nextAnimation);
             } else {
                 animator.animate(REST,  0.5f,  2f, 1);
