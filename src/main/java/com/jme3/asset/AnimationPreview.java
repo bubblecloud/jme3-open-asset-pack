@@ -108,7 +108,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             animator.animate(REST, 1f, 2f, 1);
         }
 
-        stateManager.attach(new VideoRecorderAppState());
+        //stateManager.attach(new VideoRecorderAppState());
 
         cam.setLocation(new Vector3f(0, 1.5f, 3f));
         cam.setRotation(
@@ -130,7 +130,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
         }
 
         if (REST.equals(animator.getAnimationName())) {
-            animator.animate(STAND, 1f, 1f, 1);
+            animator.animate(STAND, 0.5f, 2f, 1);
             System.out.println("Playing beginning " + STAND);
         } else if (!STAND.equals(animationName)) {
             animator.animate(STAND, 2f, 0.5f, 1);
@@ -141,7 +141,7 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
                 animator.animate(nextAnimation, 1f, 0.5f, ANIMATION_REPEAT_COUNT);
                 System.out.println("Playing: " + nextAnimation);
             } else {
-                animator.animate(REST,  1f,  1f, 1);
+                animator.animate(REST,  0.5f,  2f, 1);
                 System.out.println("Playing final " + REST);
             }
         }
