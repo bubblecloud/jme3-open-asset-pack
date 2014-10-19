@@ -9,11 +9,11 @@ import com.jme3.scene.Spatial;
 import java.util.*;
 
 /**
- * Animates multi mesh characters with multiple AnimControllers.
+ * Animates multi mesh models with multiple AnimControllers.
  *
  * @author Tommi S.E. Laukkanen
  */
-public class CharacterAnimator {
+public class AnimationController {
     /**
      * Character animation controllers.
      */
@@ -22,32 +22,26 @@ public class CharacterAnimator {
      * Character animation channels.
      */
     final Map<String, AnimChannel> animChannels = new HashMap<>();
-
     /**
      * The character animator listener.
      */
-    private CharacterAnimatorListener characterAnimatorListener;
-
+    private AnimationListener animationListener;
     /**
      * Name of the last animation played.
      */
     private String animationName = null;
-
     /**
      * The animation speed multiplier.
      */
     private float speedMultiplier = 0f;
-
     /**
      * The loop count.
      */
     private int loopCount = 0;
-
     /**
      * The animation max time.
      */
     private float animationMaxTime = 0f;
-
     /**
      * The animation time.
      */
@@ -58,7 +52,7 @@ public class CharacterAnimator {
      * and create animation channels.
      * @param character the character spatial
      */
-    public CharacterAnimator(final Spatial character) {
+    public AnimationController(final Spatial character) {
         SceneGraphVisitorAdapter visitor = new SceneGraphVisitorAdapter() {
             @Override
             public void visit(final Geometry geometry) {
@@ -96,6 +90,7 @@ public class CharacterAnimator {
      * @param animationName the animation
      * @param speedMultiplier the speed multiplier (1 = animation native speed, 2 = double speed...)
      * @param blendTime the blend time in seconds
+     * @param loopCount the loop count or 0 for infinite looping
      */
     public void animate(final String animationName, final float speedMultiplier, final float blendTime,
                         final int loopCount) {
@@ -152,9 +147,9 @@ public class CharacterAnimator {
      */
     public void update(final float tpf) {
         if (animationTime > 0f && animationTime > animationMaxTime) {
-            if (loopCount <= 0) {
+            if (loopCount == 0) {
                 speedMultiplier = 0f;
-                characterAnimatorListener.onAnimCycleDone(animationName);
+                animationListener.onAnimCycleDone(animationName);
             } else {
                 loopCount--;
             }
@@ -171,9 +166,9 @@ public class CharacterAnimator {
 
     /**
      * Sets character animator listener.
-     * @param characterAnimatorListener the character animator listener
+     * @param animationListener the character animator listener
      */
-    public void setCharacterAnimatorListener(final CharacterAnimatorListener characterAnimatorListener) {
-        this.characterAnimatorListener = characterAnimatorListener;
+    public void setAnimationListener(final AnimationListener animationListener) {
+        this.animationListener = animationListener;
     }
 }

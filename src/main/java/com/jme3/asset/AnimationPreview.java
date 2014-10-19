@@ -1,7 +1,6 @@
 package com.jme3.asset;
 
 import com.jme3.animation.AnimControl;
-import com.jme3.animation.LoopMode;
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.VideoRecorderAppState;
 import com.jme3.light.AmbientLight;
@@ -16,11 +15,11 @@ import com.jme3.system.AppSettings;
 import java.util.ArrayList;
 
 /**
- * Application for reviewing character animations.
+ * Application for reviewing animations.
  *
  * @author Tommi S.E. Laukkanen
  */
-public class AnimationPreview extends SimpleApplication implements CharacterAnimatorListener {
+public class AnimationPreview extends SimpleApplication implements AnimationListener {
 
     /**
      * The character model file.
@@ -38,14 +37,18 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
      * Special pose used between animations.
      */
     public static final String STAND = "Stand";
+    /**
+     * Main mesh name containing AnimControl with all animation names.
+     */
     public static final String MAIN_MESH_NAME = "Body";
-
     /**
      * List of animations loaded from model file.
      */
     private ArrayList<String> animations;
-
-    private CharacterAnimator animator;
+    /**
+     * The animation controller.
+     */
+    private AnimationController animationController;
 
     /**
      * Main class used to run the animation preview from command line.
@@ -81,13 +84,13 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
         final Node player = (Node) assetManager.loadModel(CHARACTER_MODEL_FILE);
         rootNode.attachChild(player);
 
-        animator = new CharacterAnimator(player);
-        animator.setCharacterAnimatorListener(this);
+        animationController = new AnimationController(player);
+        animationController.setAnimationListener(this);
 
-        System.out.println(animator.getSpatialNamesWithAnimations());
+        System.out.println(animationController.getSpatialNamesWithAnimations());
 
         String mainSpatialName = null;
-        for (final String spatialName : animator.getSpatialNamesWithAnimations()) {
+        for (final String spatialName : animationController.getSpatialNamesWithAnimations()) {
             if (spatialName.startsWith(MAIN_MESH_NAME)) {
                 mainSpatialName =  spatialName;
             }
@@ -97,18 +100,18 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
             return;
         }
 
-        System.out.println("Main mesh: " + animator.getSpatialNamesWithAnimations());
+        System.out.println("Main mesh: " + animationController.getSpatialNamesWithAnimations());
 
-        final AnimControl control = animator.getAnimControl(mainSpatialName);
+        final AnimControl control = animationController.getAnimControl(mainSpatialName);
         if (control != null) {
             animations = new ArrayList<>(control.getAnimationNames());
             animations.remove(STAND);
             animations.remove(REST);
             System.out.println(animations);
-            animator.animate(REST, 1f, 2f, 1);
+            animationController.animate(REST, 1f, 2f, 1);
         }
 
-        //stateManager.attach(new VideoRecorderAppState());
+        stateManager.attach(new VideoRecorderAppState());
 
         cam.setLocation(new Vector3f(0, 2f, 3f));
         cam.setRotation(
@@ -120,28 +123,28 @@ public class AnimationPreview extends SimpleApplication implements CharacterAnim
     @Override
     public void simpleUpdate(float tpf) {
         super.simpleUpdate(tpf);
-        animator.update(tpf);
+        animationController.update(tpf);
     }
 
     @Override
     public void onAnimCycleDone(final String animationName) {
-        if (animations.size() == 0 && REST.equals(animator.getAnimationName())) {
+        if (animations.size() == 0 && REST.equals(animationController.getAnimationName())) {
             System.exit(0);
         }
 
-        if (REST.equals(animator.getAnimationName())) {
-            animator.animate(STAND, 0.5f, 2f, 1);
+        if (REST.equals(animationController.getAnimationName())) {
+            animationController.animate(STAND, 0.5f, 2f, 1);
             System.out.println("Playing beginning " + STAND);
         } else if (!STAND.equals(animationName)) {
-            animator.animate(STAND, 1f, 0.5f, 1);
+            animationController.animate(STAND, 1f, 0.5f, 1);
             System.out.println("Playing intermediate " + STAND);
         } else {
             if (animations.size() > 0) {
                 final String nextAnimation =  animations.remove(0);
-                animator.animate(nextAnimation, 1.5f, 0.5f, ANIMATION_REPEAT_COUNT);
+                animationController.animate(nextAnimation, 1.5f, 0.5f, ANIMATION_REPEAT_COUNT);
                 System.out.println("Playing: " + nextAnimation);
             } else {
-                animator.animate(REST,  0.5f,  2f, 1);
+                animationController.animate(REST,  0.5f,  2f, 1);
                 System.out.println("Playing final " + REST);
             }
         }

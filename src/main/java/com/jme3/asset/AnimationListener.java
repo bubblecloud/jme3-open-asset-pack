@@ -1,11 +1,11 @@
 package com.jme3.asset;
 
 /**
- * Character animator listener.
+ * Animation listener.
  *
  * @author Tommi S.E. Laukkanen
  */
-public interface CharacterAnimatorListener {
+public interface AnimationListener {
     /**
      * Invoked when animation cycle completes.
      * @param animationName the name of the animation which completed
