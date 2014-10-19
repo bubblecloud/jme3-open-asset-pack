@@ -1,6 +1,7 @@
 package com.jme3.asset;
 
 import com.jme3.animation.*;
+import com.jme3.math.Quaternion;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.scene.SceneGraphVisitorAdapter;
@@ -171,4 +172,5 @@ public class AnimationController {
     public void setAnimationListener(final AnimationListener animationListener) {
         this.animationListener = animationListener;
     }
+
 }
